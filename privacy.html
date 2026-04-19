@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #06090f;
+            color: #c4d4de;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #6fdcff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .updated { font-size: 0.9em; color: #7a8994; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
+        strong { color: #d3e2eb; font-weight: 600; }
+        ul, ol { padding-left: 24px; margin-bottom: 12px; }
+        a { color: #6fdcff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: rgba(10, 42, 58, 0.6);
+            color: #a9e4ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .callout {
+            background: rgba(10, 42, 58, 0.5);
+            border-left: 3px solid #6fdcff;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 16px 0 20px;
+        }
+        .callout p { margin-bottom: 0; color: #c4dfec; }
+        footer {
+            text-align: center;
+            padding: 32px 0 8px;
+            font-size: 0.85em;
+            color: #556671;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 56px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← Back to Terminal Conductor</a>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: April 18, 2026</p>
+
+        <h2>Overview</h2>
+        <p>Terminal Conductor is a macOS application developed by Mark Huthmaker, operating as Armchair Caesars (the "Developer"). This Privacy Policy describes what information Terminal Conductor handles, how it handles it, and your choices regarding that information.</p>
+
+        <div class="callout">
+            <p><strong>In plain English:</strong> Terminal Conductor runs entirely on your Mac. We do not operate servers, do not collect analytics, do not track you, and do not transmit any of your data to Us or to any third party. Every piece of state you see in the app lives in files under your home directory, under your control.</p>
+        </div>
+
+        <h2>1. Data We Do Not Collect</h2>
+        <p>Terminal Conductor does <strong>not</strong> collect, store, or transmit any of the following to the Developer, to any affiliate, or to any third party:</p>
+        <ul>
+            <li>Your name, email address, phone number, or any account identifier;</li>
+            <li>Your IP address or any device identifier;</li>
+            <li>Analytics, usage telemetry, performance metrics, or crash reports;</li>
+            <li>The contents of your terminals, command history, files, or scrollback;</li>
+            <li>The contents of your communications with AI agents running inside Terminal Conductor;</li>
+            <li>Any tracking cookies, pixels, or similar technologies.</li>
+        </ul>
+        <p>We have no servers, no back-end database, and no ability to collect your data — by design.</p>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>So that Terminal Conductor can restore your workspace between launches and function as a terminal workspace, the App stores the following information locally on your Mac only:</p>
+
+        <h3>Session state (local SQLite database)</h3>
+        <ul>
+            <li>Tab labels, colors, group memberships, and visual-mode preferences;</li>
+            <li>Resume Commands you have explicitly saved, with the descriptions and bypass flags you chose;</li>
+            <li>Pinned and Recent Connections (SSH hosts, Docker container names), auto-populated as you use them;</li>
+            <li>Rolling scrollback buffers, so that tabs can be restored after a relaunch;</li>
+            <li>Session metadata — working directories, agent detection state, and layout preferences.</li>
+        </ul>
+
+        <h3>Settings (local preferences)</h3>
+        <ul>
+            <li>Font, color, theme, and visual-mode preferences;</li>
+            <li>Keyboard shortcut assignments;</li>
+            <li>Panel sizes and open/closed states;</li>
+            <li>Feature toggles (SSH keepalive, mention picker, activity pulse, etc.).</li>
+        </ul>
+
+        <h3>Optional SSH passwords</h3>
+        <p>If you enable the optional SSH auto-login feature, Terminal Conductor stores the passwords you explicitly enter in your browser's <code>localStorage</code> with light obfuscation. This is a convenience feature only, <strong>not a security boundary</strong>. We recommend using SSH keys or a dedicated password manager for real security. Passwords are never transmitted off your device and never written to macOS Keychain.</p>
+
+        <h3>Runtime state (in-memory only)</h3>
+        <p>Process-tree and auto-detection state (current agent, git branch, framework, running foreground command) is held in memory while the App runs and is not written to disk in any identifiable form.</p>
+
+        <h2>3. How Your Data Is Used</h2>
+        <p>The data described in Section 2 is used exclusively to:</p>
+        <ul>
+            <li>Restore your workspace when you relaunch Terminal Conductor;</li>
+            <li>Display identity information in the tab bar, identity bar, and overview cards;</li>
+            <li>Apply your chosen appearance and keyboard preferences;</li>
+            <li>Power features you have explicitly enabled, such as saved Resume Commands, Pinned Connections, or SSH auto-login.</li>
+        </ul>
+        <p>None of this data is used for advertising, analytics, profiling, or any purpose unrelated to the core functionality of the App.</p>
+
+        <h2>4. Data Sharing and Third-Party Services</h2>
+        <p><strong>Terminal Conductor itself does not share any data with any third party.</strong> Terminal Conductor is a terminal wrapper, which means you may use it to run other software — AI coding agents (such as Claude Code, Codex CLI, Gemini CLI, Aider), <code>ssh</code>, <code>docker</code>, <code>git</code>, and any other command-line tool. Those tools:</p>
+        <ul>
+            <li>Operate independently;</li>
+            <li>Have their own privacy policies;</li>
+            <li>Send and receive data on their own, not through Terminal Conductor;</li>
+            <li>Are entirely your responsibility to configure and use.</li>
+        </ul>
+        <p>Terminal Conductor does not inspect, proxy, log, or modify the network traffic of those tools. Terminal Conductor does not integrate with any analytics, advertising, or tracking SDK.</p>
+
+        <h2>5. Data Storage, Security, and Protection</h2>
+        <p>All Terminal Conductor data is stored on your Mac in two locations:</p>
+        <ul>
+            <li><code>~/Library/Application Support/TerminalConductor/</code> — session database, scrollback, persisted state.</li>
+            <li><code>~/Library/Preferences/</code> and browser <code>localStorage</code> within the App — settings and feature toggles.</li>
+        </ul>
+        <p>These paths are protected by standard macOS user-account permissions. Terminal Conductor does not transmit any of this data off your Mac.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>Persisted state (tabs, groups, scrollback, settings, saved commands) is retained indefinitely so your workspace survives restarts. You may clear or modify this state at any time:</p>
+        <ul>
+            <li><strong>Per-tab:</strong> closing a tab discards its scrollback and identity.</li>
+            <li><strong>Recent Connections:</strong> right-click a connection row and choose Remove.</li>
+            <li><strong>Resume Commands:</strong> right-click a saved command and choose Delete.</li>
+            <li><strong>Everything:</strong> see Section 7 for complete deletion.</li>
+        </ul>
+
+        <h2>7. How to Delete Your Data Completely</h2>
+        <p>Because all Terminal Conductor data is stored on your Mac only, deletion is a purely local operation:</p>
+        <ol>
+            <li>Quit Terminal Conductor.</li>
+            <li>Remove the App from <code>/Applications</code>.</li>
+            <li>Delete the Application Support directory:
+                <br><code>~/Library/Application Support/TerminalConductor/</code></li>
+            <li>Delete the preferences file:
+                <br><code>~/Library/Preferences/com.terminalconductor.app.plist</code></li>
+            <li>(Optional) If you enabled SSH auto-login, clear the <code>localStorage</code> by removing the directory in Step 3 — that covers it.</li>
+        </ol>
+        <p>Because we store no data off your device, no further action is required, and there is nothing for us to delete on our side.</p>
+
+        <h2>8. macOS Entitlements and Their Purpose</h2>
+        <p>Terminal Conductor declares only the macOS entitlements required for its core functionality. Each is listed below, with its rationale, so that App Review and privacy-conscious users can match entitlements to features:</p>
+        <ul>
+            <li><strong><code>com.apple.security.app-sandbox</code></strong> — runs Terminal Conductor inside the macOS App Sandbox.</li>
+            <li><strong><code>com.apple.security.files.user-selected.read-write</code></strong> — lets you open terminals in, and navigate to, folders you explicitly choose through the file picker or drag-and-drop.</li>
+            <li><strong><code>com.apple.security.inherit</code></strong> — required so the PTY child processes (your shells) inherit the sandbox.</li>
+            <li><strong><code>com.apple.security.network.client</code></strong> — required so tools you launch inside Terminal Conductor (<code>ssh</code>, <code>git</code>, <code>curl</code>, AI agents) can make outbound network connections on your behalf.</li>
+        </ul>
+        <p>No entitlement in Terminal Conductor is used for background data collection, tracking, or analytics.</p>
+
+        <h2>9. Children's Privacy</h2>
+        <p>Terminal Conductor is a developer productivity tool intended for users 13 years of age or older. We do not knowingly collect personal information from anyone — including children — because we do not collect personal information at all.</p>
+
+        <h2>10. Your Rights</h2>
+        <p>Depending on where you live, you may have rights under applicable data-protection law (such as the California Consumer Privacy Act or the EU General Data Protection Regulation) to access, correct, delete, or restrict processing of your personal information. Because Terminal Conductor does not collect or process personal information about you, there is nothing for us to access, correct, delete, or restrict — your data is already under your sole control on your Mac, and you can delete it at any time using the steps in Section 7.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. If we do, we will update the "Last updated" date at the top of this document and post the new version at this URL. Material changes will be called out in the App's release notes.</p>
+
+        <h2>12. Contact</h2>
+        <p>For privacy-related questions or concerns, email <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a> with the subject line "Privacy Request."</p>
+
+        <footer>
+            <p>&copy; 2026 Mark Huthmaker, operating as Armchair Caesars. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

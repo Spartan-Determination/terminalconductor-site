@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End User License Agreement — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #06090f;
+            color: #c4d4de;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #6fdcff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .updated { font-size: 0.9em; color: #7a8994; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
+        strong { color: #d3e2eb; font-weight: 600; }
+        em { color: #c4d4de; font-style: italic; }
+        ul, ol { padding-left: 24px; margin-bottom: 12px; }
+        a { color: #6fdcff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: rgba(10, 42, 58, 0.6);
+            color: #a9e4ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .callout {
+            background: rgba(10, 42, 58, 0.5);
+            border-left: 3px solid #6fdcff;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 16px 0 20px;
+        }
+        .callout p { margin-bottom: 0; color: #c4dfec; }
+        .allcaps {
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        footer {
+            text-align: center;
+            padding: 32px 0 8px;
+            font-size: 0.85em;
+            color: #556671;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 56px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← Back to Terminal Conductor</a>
+        <h1>End User License Agreement</h1>
+        <p class="updated">Last updated: April 18, 2026</p>
+
+        <p>This End User License Agreement ("EULA") is a legal agreement between you ("You", "Your") and Mark Huthmaker, operating as Armchair Caesars ("We", "Our", "Us", the "Developer"). It governs your use of the Terminal Conductor macOS application and any updates, upgrades, or supplements to it (the "App"). By installing, copying, or using the App, you agree to be bound by this EULA. If you do not agree, do not install or use the App.</p>
+
+        <h2>1. What This App Does (and Doesn't Do)</h2>
+        <p>Terminal Conductor is a terminal wrapper. It spawns real shells on your machine using the same PTY interfaces as any other terminal emulator, and renders the output in a visual intelligence layer (identity, context, memory, orchestration). <strong>Any command you type into a Terminal Conductor tab — or that an AI agent running inside a Terminal Conductor tab types on your behalf — is executed by your operating system exactly as if you had typed it into a plain terminal.</strong> Terminal Conductor does not review, sanitize, simulate, or reverse commands. It does not know which commands are safe.</p>
+
+        <h2>2. License Grant</h2>
+        <p>Subject to your compliance with this EULA, We grant you a limited, non-exclusive, non-transferable, revocable license to install and use the App on Apple-branded computers that you own or control, in accordance with the Apple Media Services Terms and Conditions or the license accompanying a direct-download build.</p>
+
+        <h2>3. What You May Not Do</h2>
+        <p>You agree that you will not:</p>
+        <ul>
+            <li>Use the App for any unlawful purpose or in violation of any applicable law;</li>
+            <li>Attempt to access systems, data, or accounts that you do not own or do not have explicit permission to access;</li>
+            <li>Reverse engineer, decompile, or disassemble the App, except to the extent that applicable law expressly permits despite this limitation;</li>
+            <li>Remove, alter, or obscure any proprietary notices in the App;</li>
+            <li>Distribute, sublicense, rent, lease, or sell the App or any portion of it;</li>
+            <li>Use the App to build a competing product that reproduces the App's functionality.</li>
+        </ul>
+
+        <h2>4. AI Agents and Third-Party Tools — Read This Carefully</h2>
+        <p>Terminal Conductor is designed to host AI coding agents (including, without limitation, Anthropic Claude Code, OpenAI Codex CLI, Google Gemini CLI, and Aider) and any other command-line tools you launch inside its terminal tabs. <strong>We do not build, operate, control, review, or endorse any of those third-party tools.</strong> When you use an AI agent inside Terminal Conductor, that agent:</p>
+        <ul>
+            <li>Runs as a separate process you have installed and authorized;</li>
+            <li>Is governed by its own terms of service, license, and privacy policy;</li>
+            <li>Can execute commands, edit files, make network requests, push code, delete data, and take any other action available to your user account on this computer;</li>
+            <li>May receive input you provide, context Terminal Conductor displays, and output from other commands in the same terminal.</li>
+        </ul>
+        <p><strong>You are solely responsible for every action that any tool or agent running inside Terminal Conductor takes on your system, on your data, on third-party services you have connected, and on any network you have access to.</strong> This includes, without limitation, actions taken by agents that you invoked, agents you left running, or agents operating in "auto-approve," "bypass permissions," or "dangerous" modes.</p>
+
+        <h2>5. You Are Responsible for Backups</h2>
+        <p>Terminal Conductor and the tools running inside it can modify or delete any file you have permission to access. <strong>You are solely responsible for maintaining your own backups of your code, data, credentials, and any other information you value.</strong> We strongly recommend:</p>
+        <ul>
+            <li>Committing and pushing code to a remote repository frequently;</li>
+            <li>Maintaining off-machine backups of important directories;</li>
+            <li>Testing destructive commands (<code>rm -rf</code>, <code>git reset --hard</code>, <code>DROP TABLE</code>, <code>docker system prune</code>, etc.) in a scratch environment before production;</li>
+            <li>Using read-only credentials where possible;</li>
+            <li>Reviewing every command an agent drafts before executing it, especially in auto-approve modes.</li>
+        </ul>
+        <p>We provide features such as password scrubbing, environment badges, destructive-command heuristics, and safety tiers as convenience and defense-in-depth, but <strong>they are not guarantees.</strong> No feature in Terminal Conductor can reliably prevent data loss. Back up your work.</p>
+
+        <h2>6. Disclaimer of Warranty</h2>
+        <p class="allcaps">The App is provided "As Is" and "As Available," with all faults, and without warranty of any kind. To the maximum extent permitted by applicable law, We disclaim all warranties, whether express, implied, statutory, or otherwise, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement, and any warranties arising out of course of dealing or usage of trade.</p>
+        <p class="allcaps">We do not warrant that the App will be uninterrupted, error-free, secure, free of harmful components, or compatible with any particular hardware, software, or configuration. We do not warrant that defects will be corrected, that the App will operate in combination with any other software, or that any information obtained through the App will be accurate or reliable.</p>
+        <p class="allcaps">We make no warranty whatsoever concerning the behavior of AI agents, third-party command-line tools, scripts, or any other code that you or others run inside the App.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p class="allcaps">To the maximum extent permitted by applicable law, in no event will We, Our affiliates, licensors, contributors, or agents be liable for any indirect, incidental, special, exemplary, punitive, or consequential damages of any kind, including without limitation damages for lost profits, lost revenue, lost business, lost data, loss of goodwill, business interruption, corrupted or destroyed files, unauthorized access, compromised credentials, damaged systems, or any other commercial or personal damages or losses, arising out of or related to your use of or inability to use the App, even if We have been advised of the possibility of such damages.</p>
+        <p class="allcaps">This limitation applies regardless of the legal theory on which the claim is based (contract, tort, strict liability, or otherwise), even if a limited remedy fails of its essential purpose.</p>
+        <p class="allcaps">To the maximum extent permitted by applicable law, Our total cumulative liability to you for all claims arising out of or relating to the App or this EULA will not exceed the greater of (a) the amount you paid Us for the App in the twelve months preceding the event giving rise to the claim, or (b) five U.S. dollars (US $5.00).</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so portions of the above limitations may not apply to you. In those jurisdictions, Our liability is limited to the smallest extent permitted by law.</p>
+
+        <h2>8. Assumption of Risk</h2>
+        <p>You expressly acknowledge and agree that your use of Terminal Conductor — including any use involving AI coding agents, automated scripts, elevated privileges, production systems, or destructive commands — is undertaken at your sole risk. You assume full responsibility for evaluating each command before it is executed and for the consequences of each command that is executed, whether you typed it yourself or authorized an agent to type it.</p>
+
+        <h2>9. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless the Developer and Our affiliates, licensors, and contributors from and against any claims, damages, liabilities, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use or misuse of the App; (b) any commands executed in or through the App, whether by you, by an AI agent acting on your behalf, or by any other process; (c) your violation of this EULA; (d) your violation of any applicable law or regulation; or (e) your violation of any third party's rights, including intellectual property or privacy rights.</p>
+
+        <h2>10. Updates and Availability</h2>
+        <p>We may release updates, bug fixes, patches, or new versions of the App from time to time. Updates may be delivered automatically through the Mac App Store. Any update is governed by this EULA unless accompanied by a separate license, in which case the accompanying license controls. We do not guarantee that any particular feature will be preserved across updates.</p>
+
+        <h2>11. Open-Source and Third-Party Components</h2>
+        <p>The App incorporates open-source components, including without limitation components licensed under the MIT, Apache 2.0, BSD, and similar permissive licenses. Those components remain subject to their respective licenses, which are available on request. Nothing in this EULA restricts your rights under those third-party licenses with respect to the specific third-party components.</p>
+
+        <h2>12. U.S. Government End Users</h2>
+        <p>If you are a U.S. Government end user, the App is a "commercial item" as defined at 48 C.F.R. § 2.101, consisting of "commercial computer software" and "commercial computer software documentation." In accordance with 48 C.F.R. § 12.212 and 48 C.F.R. § 227.7202-1 through 227.7202-4, all U.S. Government end users acquire the App with only those rights set forth in this EULA.</p>
+
+        <h2>13. Export Control</h2>
+        <p>You may not use, export, re-export, or transfer the App except in compliance with U.S. export laws and the laws of the jurisdiction in which you obtained the App. You represent that you are not located in, under the control of, or a national or resident of any country subject to a U.S. Government embargo, and that you are not on any U.S. Government list of prohibited or restricted parties.</p>
+
+        <h2>14. Mac App Store Terms</h2>
+        <p>If you obtained the App from the Mac App Store, the following additional terms apply and are expressly acknowledged by you:</p>
+        <ul>
+            <li>This EULA is concluded between you and the Developer only, and not with Apple Inc. ("Apple").</li>
+            <li>The Developer, not Apple, is solely responsible for the App and its contents.</li>
+            <li>Apple has no obligation whatsoever to provide any maintenance or support services with respect to the App.</li>
+            <li>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the App to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.</li>
+            <li>The Developer, not Apple, is responsible for addressing any claims by you or any third party relating to the App, including product liability claims, any claim that the App fails to conform to any applicable legal or regulatory requirement, and claims arising under consumer protection or similar legislation.</li>
+            <li>The Developer, not Apple, is responsible for the investigation, defense, settlement, and discharge of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights.</li>
+            <li>You represent that you are not located in a country subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.</li>
+            <li>Apple and Apple's subsidiaries are third-party beneficiaries of this EULA, and upon your acceptance, Apple will have the right (and will be deemed to have accepted the right) to enforce this EULA against you as a third-party beneficiary of this EULA.</li>
+        </ul>
+
+        <h2>15. Governing Law and Jurisdiction</h2>
+        <p>This EULA is governed by the laws of the State of California, United States of America, without regard to its conflict-of-laws principles. You and the Developer agree that the state and federal courts located in the State of California will have exclusive jurisdiction over any dispute arising out of or relating to this EULA, except that either party may seek injunctive or equitable relief in any court of competent jurisdiction. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this EULA.</p>
+        <p>Nothing in this Section 15 limits any mandatory consumer-protection rights available to you under the laws of your place of residence.</p>
+
+        <h2>16. Termination</h2>
+        <p>This EULA is effective until terminated. Your rights under this EULA will terminate automatically and without notice if you fail to comply with any of its terms. Upon termination, you must cease all use of the App and delete all copies in your possession or control. Sections 4 through 9, 13, 14, 15, and 17 survive any termination of this EULA.</p>
+
+        <h2>17. Miscellaneous</h2>
+        <p><strong>Entire Agreement.</strong> This EULA, together with the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>, constitutes the entire agreement between you and the Developer with respect to the App and supersedes all prior or contemporaneous understandings.</p>
+        <p><strong>Severability.</strong> If any provision of this EULA is held to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+        <p><strong>No Waiver.</strong> Our failure to enforce any right or provision of this EULA will not be deemed a waiver of that right or provision.</p>
+        <p><strong>Assignment.</strong> You may not assign or transfer this EULA. We may assign this EULA without restriction, including in connection with a merger, acquisition, or sale of assets.</p>
+        <p><strong>Changes.</strong> We may update this EULA from time to time. Material changes will be noted in the App's release notes and by updating the "Last updated" date at the top of this document. Your continued use of the App after any update constitutes acceptance of the updated EULA.</p>
+
+        <h2>18. Contact</h2>
+        <p>Questions about this EULA: <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>.</p>
+
+        <footer>
+            <p>&copy; 2026 Mark Huthmaker, operating as Armchair Caesars. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

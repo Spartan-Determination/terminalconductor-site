@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Guide — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #06090f;
+            color: #c4d4de;
+            line-height: 1.7;
+        }
+        .layout { display: flex; max-width: 1100px; margin: 0 auto; padding: 40px 24px; gap: 48px; }
+        nav.toc {
+            position: sticky;
+            top: 40px;
+            width: 230px;
+            align-self: flex-start;
+            flex-shrink: 0;
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+        nav.toc h4 {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #6fdcff;
+            margin-bottom: 12px;
+        }
+        nav.toc ul { list-style: none; padding: 0; }
+        nav.toc li { margin-bottom: 4px; }
+        nav.toc a {
+            font-size: 0.85em;
+            color: #8298a6;
+            text-decoration: none;
+            line-height: 1.5;
+            display: block;
+            padding: 3px 0;
+        }
+        nav.toc a:hover { color: #6fdcff; }
+        .content { flex: 1; min-width: 0; }
+        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; text-decoration: none; }
+        .back:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.25em;
+            font-weight: 700;
+            color: #6fdcff;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle { color: #7a8994; margin-bottom: 40px; font-size: 1em; }
+        h2 {
+            font-size: 1.4em;
+            color: #e8f3f9;
+            margin: 56px 0 16px;
+            padding-top: 8px;
+            letter-spacing: -0.3px;
+        }
+        h3 {
+            font-size: 1.05em;
+            color: #6fdcff;
+            margin: 24px 0 10px;
+            letter-spacing: -0.1px;
+        }
+        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 10px; }
+        strong { color: #d3e2eb; font-weight: 600; }
+        em { color: #c4d4de; }
+        ul, ol { padding-left: 22px; margin-bottom: 16px; }
+        a { color: #6fdcff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        kbd {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: rgba(10, 42, 58, 0.7);
+            color: #c4dfec;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            border: 1px solid rgba(111, 220, 255, 0.15);
+            border-bottom: 2px solid rgba(111, 220, 255, 0.2);
+        }
+        code {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: rgba(10, 42, 58, 0.6);
+            color: #a9e4ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        pre {
+            background: rgba(10, 42, 58, 0.55);
+            border: 1px solid rgba(111, 220, 255, 0.15);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 12px 0 20px;
+            overflow-x: auto;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: #c4dfec;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+        .callout {
+            background: rgba(10, 42, 58, 0.5);
+            border-left: 3px solid #6fdcff;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 16px 0;
+        }
+        .callout p { margin-bottom: 0; color: #c4dfec; }
+        footer {
+            text-align: center;
+            padding: 40px 0 16px;
+            font-size: 0.85em;
+            color: #556671;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 72px;
+        }
+        @media (max-width: 768px) {
+            .layout { flex-direction: column; gap: 24px; }
+            nav.toc { position: static; width: auto; max-height: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav class="toc">
+            <h4>Contents</h4>
+            <ul>
+                <li><a href="#quickstart">Quick start</a></li>
+                <li><a href="#core">Core terminal experience</a></li>
+                <li><a href="#identity">Identity &amp; auto-detection</a></li>
+                <li><a href="#tabs">Tabs, groups &amp; workspace</a></li>
+                <li><a href="#crosstab">Cross-tab orchestration</a></li>
+                <li><a href="#persistence">Session persistence</a></li>
+                <li><a href="#connections">Connections</a></li>
+                <li><a href="#safety">Safety &amp; security</a></li>
+                <li><a href="#panels">Panels &amp; productivity</a></li>
+                <li><a href="#visual">Visual modes &amp; borders</a></li>
+                <li><a href="#skins">Skins (Default, Browser, 1992)</a></li>
+                <li><a href="#privacy">Privacy &amp; local-first</a></li>
+                <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+                <li><a href="#troubleshoot">Troubleshooting</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <a href="/" class="back">← Back to Terminal Conductor</a>
+            <h1>Features Guide</h1>
+            <p class="subtitle">A complete walkthrough of Terminal Conductor — every panel, menu, and workflow.</p>
+
+            <section id="quickstart">
+                <h2>Quick start</h2>
+                <ol>
+                    <li>Install Terminal Conductor from the Mac App Store (or direct download).</li>
+                    <li>Launch it. The first tab opens your default shell in your home directory.</li>
+                    <li>Press <kbd>⌘T</kbd> for a new tab; <kbd>⌘W</kbd> to close.</li>
+                    <li>Open the right panel (<kbd>⌘⇧R</kbd>) to discover agent commands and custom slash commands.</li>
+                    <li>Open the bottom panel (<kbd>⌘⇧B</kbd>) to see live state — Active Processes, PR status, test results.</li>
+                    <li>Right-click any tab for grouping, splitting, renaming, color.</li>
+                </ol>
+                <p>That's enough to be productive. Everything below is for when you want more.</p>
+            </section>
+
+            <section id="core">
+                <h2>Core terminal experience</h2>
+                <p>Terminal Conductor wraps real PTYs using the same <code>portable-pty</code> library that powers native terminals. Rendering is xterm.js v5 with WebGL acceleration where available. This means:</p>
+                <ul>
+                    <li>Your existing <code>$SHELL</code> — zsh, bash, fish — runs unmodified. Your dotfiles, aliases, prompts, and plugins work as they always have.</li>
+                    <li>Copy/paste, selection, scrollback, and resize behave like any native terminal.</li>
+                    <li>Font family and size are configurable globally (<em>Settings → Appearance → Font</em>) or per-tab.</li>
+                    <li>Tabs can be reordered by dragging.</li>
+                    <li>Per-tab shell history is available: toggle <em>Settings → Terminal → Per-tab HISTFILE</em> so up-arrow recalls only that tab's history.</li>
+                </ul>
+            </section>
+
+            <section id="identity">
+                <h2>Identity &amp; auto-detection</h2>
+                <p>The identity bar sits below the tab bar and updates in real time for the active tab. It combines signals from the process tree, output buffer, <code>git</code>, <code>lsof</code>, and the environment to show:</p>
+                <ul>
+                    <li><strong>Color + label.</strong> Your chosen identity for this tab.</li>
+                    <li><strong>Agent badge.</strong> Claude Code, Codex CLI, Gemini CLI, Aider, or a generic shell icon. Model name appears when available.</li>
+                    <li><strong>Safety chip.</strong> LOCAL / DOCKER / SSH / PROD / STAGING / DEV / ROOT — color-coded so you always know which machine you're typing into.</li>
+                    <li><strong>Git state.</strong> Branch, dirty marker, uncommitted count, ahead/behind.</li>
+                    <li><strong>Framework chip.</strong> Next.js, Vite, Cargo, Django, etc., detected from project files.</li>
+                    <li><strong>Foreground command.</strong> What's actually running in the PTY, with a runtime counter.</li>
+                    <li><strong>GitHub PR row.</strong> Open PR for the current branch with CI status and review state, refreshed every 30 seconds via <code>gh</code>.</li>
+                </ul>
+                <p>Detection combines two signals: the process tree (primary, via <code>sysinfo</code>) and output-buffer inference (fallback, when argv can't be read — for example, <code>docker</code> argv on macOS). A 5-minute latch prevents flicker when an agent transiently drops off the process tree.</p>
+            </section>
+
+            <section id="tabs">
+                <h2>Tabs, groups &amp; workspace</h2>
+
+                <h3>Creating tabs</h3>
+                <p>Click the <code>+</code> button or press <kbd>⌘T</kbd> for a new local shell. The caret (<code>▾</code>) next to <code>+</code> opens a picker with:</p>
+                <ul>
+                    <li><strong>New local shell</strong></li>
+                    <li><strong>Pinned connections</strong> — starred SSH hosts and Docker containers.</li>
+                    <li><strong>Recent connections</strong> — the last 20 connections you've opened.</li>
+                    <li><strong>Detached sessions</strong> — PTYs the daemon is still holding, available for reattach.</li>
+                </ul>
+
+                <h3>Labeling and color-coding</h3>
+                <p>Click a tab's color dot to rename; long-press or use Settings to pick a color. Colors propagate to the identity bar, border decoration, and overview cards.</p>
+
+                <h3>Auto-labeling</h3>
+                <p>Tabs without an explicit label and without a detected project name are assigned <em>Tab A</em>, <em>Tab B</em>, <em>Tab C</em>… based on their position. No "username@host" fallback.</p>
+
+                <h3>Groups</h3>
+                <p>Right-click a tab → <em>Add to group</em>. Groups have their own name, color, and visual mode. Member tabs inherit a subtle tint. Useful for:</p>
+                <ul>
+                    <li>Broadcasting a command to every tab in the group (<em>Group header → command input</em>).</li>
+                    <li>Generating a <em>Group Briefing</em> tab that summarizes every member's state.</li>
+                    <li>Sharing context with <code>@group:</code> mentions.</li>
+                </ul>
+
+                <h3>Split view</h3>
+                <p>Right-click a tab → <em>Split view</em> → 2, 3, 4, or 5 columns. Each column is a fully functional terminal. Press <kbd>Esc</kbd> (or use the close button) to collapse.</p>
+
+                <h3>Workspace Overview</h3>
+                <p>Open from the bottom panel → <em>Overview</em> (or <kbd>⌘⇧O</kbd>). Every tab renders as a rich status card with activity glow, agent badge, branch, dirty marker, recent output preview, and time-since-activity. Fork families render as connected trees. A search box filters by tab name, branch, agent, or cwd.</p>
+            </section>
+
+            <section id="crosstab">
+                <h2>Cross-tab orchestration</h2>
+
+                <h3>@tab: and @group: mention picker</h3>
+                <p>Type <code>@tab:</code> in any terminal. A picker appears listing every other tab. Filter by typing; navigate with <kbd>↑</kbd>/<kbd>↓</kbd>; confirm with <kbd>Enter</kbd>. Terminal Conductor injects a formatted block containing the target tab's identity, recent output, and activity summary into your current prompt — the agent sees it as pasted context.</p>
+                <p><code>@group:</code> works the same but lists groups; selecting one injects a condensed briefing of every tab in that group.</p>
+
+                <h3>Share to Group</h3>
+                <p>In the Workspace Overview, each tab card has a <em>Share</em> button. One click broadcasts that tab's context to every other member of the same group.</p>
+
+                <h3>Group Briefing</h3>
+                <p>On the group header, click <em>Briefing</em>. Terminal Conductor creates a new tab labeled <em>Briefing: [GroupName]</em> with a formatted situation report of every tab in the group — branches, dirty state, recent output, last activity. Useful for syncing a team of agents or catching up after lunch.</p>
+
+                <h3>Fork orchestration</h3>
+                <p>In any agent tab, type <code>/fork</code> (or <code>/branch</code> in Claude). Terminal Conductor:</p>
+                <ol>
+                    <li>Captures the resume command from the agent's output.</li>
+                    <li>Creates a paired child tab.</li>
+                    <li>Enters the resume command in both — both tabs resume the same conversation, diverging from there.</li>
+                </ol>
+                <p>Works out of the box for Claude Code and Codex. For Gemini, we built our own fork flow because the official CLI didn't ship one. For Claude's "transcript too large to branch" case, we bypass the in-TUI check and force the fork.</p>
+
+                <h3>Disabling the mention picker</h3>
+                <p>If <code>@</code>-interception causes problems in a specific workflow, turn off <em>Settings → Interaction → Mention picker</em>.</p>
+            </section>
+
+            <section id="persistence">
+                <h2>Session persistence &amp; resilience</h2>
+                <p>Two mechanisms work together:</p>
+                <ul>
+                    <li><strong>tc-daemon.</strong> A small background Rust process that owns the PTY file descriptors. It survives Terminal Conductor quits, relaunches, and crashes — your processes keep running.</li>
+                    <li><strong>Local SQLite.</strong> Tab labels, colors, groups, settings, Resume Commands, and scrollback snapshots persist across launches.</li>
+                </ul>
+                <p>When you quit Terminal Conductor with tabs still running, a confirmation dialog appears. Answer <em>Keep running</em> to detach without killing child processes; answer <em>Close all</em> to terminate them.</p>
+
+                <h3>Detach-on-close</h3>
+                <p>Enable <em>Settings → Terminal → Keep shell on tab close</em>. After that, <kbd>⌘W</kbd> detaches the tab instead of killing it. The shell continues running in the daemon, available for reattach.</p>
+
+                <h3>Orphan recovery</h3>
+                <p>Click the caret next to <code>+</code> → detached sessions appear with name, shell PID, and one-click recover.</p>
+
+                <h3>SSH keepalive + tmux wrap</h3>
+                <p>For remote tabs, Terminal Conductor periodically sends harmless null-byte pings to prevent NAT/firewall idle timeouts. For Docker/SSH sessions, the <em>Wrap tmux</em> button on the identity bar wraps the remote session in <code>tmux</code> so a severed stream doesn't kill your running agent — reconnecting reattaches the tmux session.</p>
+
+                <h3>Disconnect banner</h3>
+                <p>If a DOCKER or SSH tab unexpectedly drops to LOCAL (container paused, SSH timeout), Terminal Conductor shows a reconnect banner with a one-click resume.</p>
+
+                <h3>Refresh terminal</h3>
+                <p>If a TUI gets stuck (ink/Yogurt/full-screen app), click <em>Refresh</em> on the identity bar or right-click → <em>Refresh</em>. Terminal Conductor sends a SIGWINCH (column nudge + refit) to force a repaint.</p>
+            </section>
+
+            <section id="connections">
+                <h2>Connections</h2>
+
+                <h3>Recent and Pinned</h3>
+                <p>Every <code>ssh user@host</code> and <code>docker exec</code> command you type is normalized and logged (with passwords scrubbed). The new-tab caret menu shows:</p>
+                <ul>
+                    <li><strong>Pinned.</strong> Connections you've explicitly starred — never evict.</li>
+                    <li><strong>Recent.</strong> The 20 most recent unpinned — auto-populated, auto-evict.</li>
+                </ul>
+                <p>Right-click any row for pin/unpin/remove.</p>
+
+                <h3>Resume Commands</h3>
+                <p>Right-click a command in a terminal or Activity Feed → <em>Save as Resume Command</em>. Terminal Conductor auto-enriches it with:</p>
+                <ul>
+                    <li><strong>cwd</strong> — replays in the right directory.</li>
+                    <li><strong>Environment</strong> — Docker container, SSH host, or local.</li>
+                    <li><strong>Bypass flags</strong> — agent permission flags if the original command used them.</li>
+                </ul>
+                <p>Replay from Bottom Panel → Resume. Terminal Conductor finds or creates a target tab matching the saved environment and runs the command. When you replay across environments — e.g. a saved local command into a Docker tab — the command is auto-wrapped (<code>docker exec -it</code> or <code>ssh host</code>) so it still reaches the right shell.</p>
+
+                <h3>Optional SSH auto-login</h3>
+                <p>Enable <em>Settings → Security → SSH auto-login</em>, enter the password when prompted once, and Terminal Conductor will auto-type it on future matching prompts. Stored lightly obfuscated in <code>localStorage</code> — convenience, not a security boundary.</p>
+
+                <h3>Image paste</h3>
+                <p>Copy an image to the clipboard, switch to a tab, press <kbd>⌘V</kbd>. Terminal Conductor:</p>
+                <ul>
+                    <li>Writes the image to a temp file (<code>~/tc-images/</code>).</li>
+                    <li>For LOCAL tabs: pastes the path.</li>
+                    <li>For DOCKER tabs: copies via <code>docker cp</code> to <code>/tmp/tc-images/</code> in the container, pastes the in-container path.</li>
+                    <li>For SSH tabs with key auth or Tailscale ControlMaster: <code>scp</code>s to the remote host.</li>
+                </ul>
+            </section>
+
+            <section id="safety">
+                <h2>Safety &amp; security</h2>
+
+                <h3>Environment badges</h3>
+                <p>Every tab shows a safety tier in the identity bar: LOCAL, DOCKER, SSH, PROD, STAGING, DEV, ROOT. Colors are distinctive so you always know where a command is about to land.</p>
+
+                <h3>Password scrubbing</h3>
+                <p>A two-phase scrubber watches command input. Phase 1 detects password prompts in PTY output and drops the next submitted line entirely. Phase 2 regex-redacts inline secrets (<code>mysql -psecret</code>, <code>--password=…</code>, <code>API_KEY=…</code>) before they land in command history, Recent Connections, or activity events.</p>
+
+                <h3>Zombie Sweep</h3>
+                <p>Open from the bottom panel. Terminal Conductor scans LOCAL and DOCKER environments for orphaned descendants of its tabs, groups them by process name, and lets you selectively kill.</p>
+                <ul>
+                    <li>Shell processes (bash, zsh, sh) and tmux are locked by default.</li>
+                    <li>The active tab's foreground chain is tagged <em>THIS TAB</em>.</li>
+                    <li>Other tabs' agents are tagged with their tab label and warn before killing.</li>
+                    <li>Kill cascades: SIGTERM first, 3-second grace period, then SIGKILL.</li>
+                </ul>
+
+                <h3>Docker container cleanup</h3>
+                <p>When you close the last tab on a given container, Terminal Conductor runs a cleanup pass inside the container (<code>pkill -TERM -f claude|codex|gemini|aider</code>) plus an idle-bash sweep, so you don't accumulate orphan shells.</p>
+
+                <h3>No Keychain</h3>
+                <p>Terminal Conductor does not write to the macOS Keychain. Optional SSH passwords live only in <code>localStorage</code>; everything else lives in the SQLite database. See <a href="/privacy">Privacy Policy</a> for the full breakdown.</p>
+            </section>
+
+            <section id="panels">
+                <h2>Panels &amp; productivity</h2>
+
+                <h3>Right panel — Command Library (<kbd>⌘⇧R</kbd>)</h3>
+                <p>A single searchable palette for every command across every agent you use.</p>
+                <ul>
+                    <li><strong>Saved conversations.</strong> Resume Commands you saved from prior agent sessions, with per-entry descriptions and bypass toggles. One-click to inject and resume.</li>
+                    <li><strong>Agent commands.</strong> Official commands for Claude Code, Codex, Gemini, Aider — discovered from your dotfiles and installed binaries.</li>
+                    <li><strong>Custom slash commands.</strong> Discovered from <code>.claude/commands/*.md</code>, <code>.codex/prompts/*.md</code>, <code>.gemini/commands/*.toml</code>.</li>
+                    <li><strong>Discovered subagents.</strong> Read from <code>.claude/agents/*.md</code> with YAML frontmatter parsing.</li>
+                </ul>
+                <p>Click any row to inject the command into the active tab — you review it at the prompt, then press <kbd>Enter</kbd>.</p>
+
+                <h3>Left panel — Activity Feed (<kbd>⌘⇧L</kbd>)</h3>
+                <p>A running chronicle of what's been happening.</p>
+                <ul>
+                    <li>File-change events with timestamps.</li>
+                    <li>Git operation timeline — commits, branch switches, merges.</li>
+                    <li>Running processes tree with CPU and RAM.</li>
+                    <li>Agent metrics where exposed — token count, cost, prompt count.</li>
+                    <li>Recent commands history — password-scrubbed, ANSI-stripped, searchable across all tabs.</li>
+                </ul>
+
+                <h3>Bottom panel — Where I Left Off (<kbd>⌘⇧B</kbd>)</h3>
+                <p>A live HUD strip.</p>
+                <ul>
+                    <li><strong>Active Processes / Active Services strip.</strong> What's running right now in this tab, with live uptime counters. Draggable divider between the two sides.</li>
+                    <li><strong>Idle / build / test / streaming / waiting classification.</strong> Updated in real time.</li>
+                    <li><strong>Pending-prompt detection.</strong> Password prompts, yes/no prompts, "press enter" prompts — caught at the terminal tail.</li>
+                    <li><strong>Test result row.</strong> pytest, cargo test, jest, vitest footers parsed from output and color-coded.</li>
+                    <li><strong>GitHub PR row.</strong> Open PR for the current branch with title, CI rollup, and review decision. Refreshed every 30 seconds via <code>gh</code>.</li>
+                    <li><strong>Environment delta row.</strong> Version shifts (Node 20 → 22, Python 3.11 → 3.12) since your baseline.</li>
+                </ul>
+
+                <h3>Panel sizing</h3>
+                <p>Drag any panel edge. Sizes persist per layout. Defaults: 224 px left/right, 160 px bottom; clamp 120–600 px.</p>
+            </section>
+
+            <section id="visual">
+                <h2>Visual modes &amp; borders</h2>
+
+                <h3>Six visual modes</h3>
+                <p>Each mode combines a color palette, terminal theme, optional ANSI rewriter, and an auto-paired border.</p>
+                <ul>
+                    <li><strong>Normal</strong> — your chosen background and text preset.</li>
+                    <li><strong>JARVISmaxxing</strong> — holographic cyan-blue HUD, pulse animation, text halo, ANSI rewriter that normalizes Claude's dark prompt bars.</li>
+                    <li><strong>Coding Cowboy</strong> — warm wood grain, tooled leather borders, engraved text, saloon ambience.</li>
+                    <li><strong>Marble Stone</strong> — carved marble background, ionic-column borders, chiseled text.</li>
+                    <li><strong>Bubblegum Princess</strong> — pink dreamscape with rainbow borders and sparkle bursts when tests pass.</li>
+                    <li><strong>Neon City</strong> — 1980s synthwave grid, neon palm corners, magenta/cyan palette.</li>
+                </ul>
+
+                <h3>Ten border decorations</h3>
+                <p>Pair any border with any visual mode, or let Terminal Conductor auto-match. Choices: None, Rose Vines, String Lights, Coding Cowboy, Ocean Waves, Stars, Ionic Columns, Unicorn Rainbow, Neon Palms, and the JARVIS HUD (visual-mode-only).</p>
+                <p>Toggle <em>Settings → Appearance → Force mode borders</em> off to decouple mode and border.</p>
+
+                <h3>Per-tab vs group vs global</h3>
+                <p>Visual mode and border can be set per tab, per group, or globally as a default. New tabs inherit the parent's appearance if <em>Settings → Appearance → Inherit on new tab</em> is on (default).</p>
+            </section>
+
+            <section id="skins">
+                <h2>Skins — Default, Browser, and 1992</h2>
+                <p>Skins are app-chrome variants, independent of visual modes. Switch in <em>Settings → Appearance → Skin</em>.</p>
+
+                <h3>Default</h3>
+                <p>Clean dark chrome with an inline horizontal tab bar.</p>
+
+                <h3>Browser</h3>
+                <p>Left sidebar containing the tab list, search, New/Overview buttons. Always-expanded or hover-to-reveal — your choice.</p>
+
+                <h3>Retro 1992</h3>
+                <p>A skin so committed to 1992 System 7 that even the settings dialog looks like it shipped with the Macintosh LC. Charcoal window chrome, 3D bevels, pinstripe titlebars, monospace menu labels. Every component — tabs, buttons, alerts, confirms, settings — is re-rendered in period-correct style. The <code>data-retro-exempt</code> attribute is reserved for surfaces that must remain modern (rare).</p>
+            </section>
+
+            <section id="privacy">
+                <h2>Privacy &amp; local-first</h2>
+                <p>Terminal Conductor runs entirely on your Mac. Zero telemetry, zero analytics, no external servers, no login required. State lives in <code>~/Library/Application Support/TerminalConductor/</code> and browser <code>localStorage</code>. See the <a href="/privacy">Privacy Policy</a> for details, including the complete-deletion procedure.</p>
+            </section>
+
+            <section id="shortcuts">
+                <h2>Keyboard shortcuts</h2>
+                <p>Default bindings (customizable in <em>Settings → Keyboard</em>):</p>
+                <ul>
+                    <li><kbd>⌘T</kbd> — New tab</li>
+                    <li><kbd>⌘W</kbd> — Close tab</li>
+                    <li><kbd>⌘⇧[</kbd> / <kbd>⌘⇧]</kbd> — Previous / Next tab</li>
+                    <li><kbd>⌘1</kbd>–<kbd>⌘9</kbd> — Jump to tab N</li>
+                    <li><kbd>⌘D</kbd> — Split view</li>
+                    <li><kbd>Esc</kbd> — Close split / dismiss picker</li>
+                    <li><kbd>⌘V</kbd> — Paste (text or image)</li>
+                    <li><kbd>⌘K</kbd> — Clear scrollback</li>
+                    <li><kbd>⌘⇧R</kbd> — Toggle right panel (Command Library)</li>
+                    <li><kbd>⌘⇧L</kbd> — Toggle left panel (Activity Feed)</li>
+                    <li><kbd>⌘⇧B</kbd> — Toggle bottom panel (Where I Left Off)</li>
+                    <li><kbd>⌘⇧O</kbd> — Workspace Overview</li>
+                    <li><kbd>⌘,</kbd> — Settings</li>
+                </ul>
+            </section>
+
+            <section id="troubleshoot">
+                <h2>Troubleshooting</h2>
+
+                <h3>Screen goes blank</h3>
+                <p>Force-quit Terminal Conductor (<kbd>⌘⌥Esc</kbd>) and relaunch. The daemon preserves your PTYs, so tabs and running agents restore. If it repeats, open <em>View → Toggle Developer Tools</em> and capture the red Console entries.</p>
+
+                <h3>Agent badge stuck</h3>
+                <p>Agent detection uses a 5-minute latch to prevent flicker. If it's wrong for longer, click <em>Refresh</em> on the identity bar or switch away and back to the tab.</p>
+
+                <h3>GitHub PR row not appearing</h3>
+                <p>The row requires <code>gh auth status</code> to be green and the current branch to have an open PR. First appearance can take up to 30 seconds.</p>
+
+                <h3>Test result row not appearing</h3>
+                <p>Make sure the output is reaching the terminal buffer — don't pipe test results through <code>less</code> or similar paginators. The parser looks for pytest <code>=====</code> footers, cargo <code>test result: ok/FAILED</code>, and jest/vitest <code>Tests: N failed, N passed</code>.</p>
+
+                <h3>SSH disconnect fires after a few minutes idle</h3>
+                <p>Enable <em>Settings → Terminal → SSH keepalive</em>. For really flaky networks, enable <em>Wrap tmux</em> on the identity bar so a dropped stream doesn't kill the remote session.</p>
+            </section>
+
+            <footer>
+                <p>Still have questions? <a href="/support">Visit support</a> or email <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>.</p>
+                <p>&copy; 2026 Mark Huthmaker, operating as Armchair Caesars. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #06090f;
+            color: #c4d4de;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #6fdcff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle { font-size: 1em; color: #7a8994; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
+        strong { color: #d3e2eb; font-weight: 600; }
+        ul { padding-left: 24px; margin-bottom: 12px; }
+        a { color: #6fdcff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: rgba(10, 42, 58, 0.6);
+            color: #a9e4ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .contact-box {
+            background: rgba(10, 42, 58, 0.5);
+            border: 1px solid rgba(111, 220, 255, 0.25);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 24px 0 32px;
+        }
+        .contact-box p { margin-bottom: 8px; }
+        .contact-box p:last-child { margin-bottom: 0; }
+        .contact-box a { font-weight: 600; }
+        .faq-item {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item strong {
+            display: block;
+            color: #d3e2eb;
+            margin-bottom: 6px;
+            font-size: 1em;
+        }
+        footer {
+            text-align: center;
+            padding: 32px 0 8px;
+            font-size: 0.85em;
+            color: #556671;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 56px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← Back to Terminal Conductor</a>
+        <h1>Support</h1>
+        <p class="subtitle">Bug reports, feature requests, and questions — all welcome.</p>
+
+        <div class="contact-box">
+            <p>Primary contact for anything not answered below:</p>
+            <p><a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a></p>
+            <p style="color: #7a8994; font-size: 0.9em;">We typically respond within one business day.</p>
+        </div>
+
+        <h2>Before You Write In</h2>
+        <p>Most "how do I…" questions are covered in the <a href="/features-guide">Features Guide</a>. It walks through every panel, menu, and workflow with examples. For bug reports, please include:</p>
+        <ul>
+            <li>macOS version (<em>About This Mac → More Info → macOS</em>).</li>
+            <li>Terminal Conductor version (<em>Terminal Conductor menu → About</em>).</li>
+            <li>What you did, what you expected, what happened instead.</li>
+            <li>Any red entries in the Console tab of <em>View → Toggle Developer Tools</em>.</li>
+            <li>If the App crashed: the most recent crash log from <code>~/Library/Logs/DiagnosticReports/</code>.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>General</h3>
+
+        <div class="faq-item">
+            <strong>What is Terminal Conductor?</strong>
+            <p>Terminal Conductor is a macOS application that wraps your terminal sessions with identity, context, memory, and orchestration. It's built for developers running multiple AI coding agents alongside shells, containers, and SSH sessions.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Does it replace my existing shell or dotfiles?</strong>
+            <p>No. Terminal Conductor spawns real shells using your existing configuration (zsh, bash, fish — whatever your <code>$SHELL</code> is). Your aliases, prompts, plugins, and tools behave exactly as they always have.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>What macOS versions are supported?</strong>
+            <p>macOS 14.0 (Sonoma) or later. Apple Silicon and Intel Macs are both supported.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Is any data sent to the cloud?</strong>
+            <p>No. Terminal Conductor has zero telemetry and no external servers. All state lives locally. See the <a href="/privacy">Privacy Policy</a> for the full breakdown.</p>
+        </div>
+
+        <h3>Tabs, groups, and workspaces</h3>
+
+        <div class="faq-item">
+            <strong>How do I create a tab?</strong>
+            <p>Click the <code>+</code> button in the tab bar, or press <kbd>⌘T</kbd>. Click the caret next to it to pick a Pinned or Recent connection instead of a local shell.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I group tabs?</strong>
+            <p>Right-click a tab → <em>Add to group</em> → pick an existing group or create a new one. Grouped tabs render with a colored bar above them and can be acted on together (broadcast, briefing, etc.).</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I split a tab into multiple columns?</strong>
+            <p>Right-click the tab → <em>Split view</em> → choose 2–5 columns. Press <kbd>Esc</kbd> to collapse.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Tabs are auto-named "Tab A", "Tab B" — how do I rename?</strong>
+            <p>Click the tab's color dot or long-press the tab; a label editor appears. Once a label is set, it takes priority over the auto-name.</p>
+        </div>
+
+        <h3>AI agents</h3>
+
+        <div class="faq-item">
+            <strong>Which AI agents does Terminal Conductor support?</strong>
+            <p>Any that run in a terminal. Auto-detection is built for Claude Code, Codex CLI, Gemini CLI, and Aider, including model-name recognition where the agent exposes it. Other CLI-based agents still work — you just won't get the badge.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>What is <code>@tab:</code>?</strong>
+            <p>Type <code>@tab:</code> in any terminal to open a picker listing other tabs. Select one and Terminal Conductor injects a formatted context block — identity, recent output, activity — into your current prompt. <code>@group:</code> does the same for whole groups.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How does <code>/fork</code> work?</strong>
+            <p>In any agent tab, type <code>/fork</code>. Terminal Conductor captures the resume command, creates a paired child tab, and enters the resume command in both — you now have two tabs resuming the same conversation, diverging from there. Works for Claude Code and Codex out of the box; for Gemini we built our own fork flow because the official CLI didn't ship one.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Claude says "transcript is too large to branch" — can I still fork?</strong>
+            <p>Yes. Terminal Conductor forces the fork in this case — we capture the resume command directly and start a parallel tab regardless of Claude's in-TUI check.</p>
+        </div>
+
+        <h3>Sessions and persistence</h3>
+
+        <div class="faq-item">
+            <strong>What happens when I quit the App?</strong>
+            <p>A lightweight session daemon keeps your PTYs alive in the background, so running processes continue. Relaunching Terminal Conductor restores every tab exactly where you left it.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>I accidentally closed a tab — can I get it back?</strong>
+            <p>If <em>Settings → Terminal → Keep shell on tab close</em> is on, closing a tab detaches it rather than killing it. Click the caret next to the <code>+</code> button to see detached sessions and reattach.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>My screen went blank after opening many tabs — what do I do?</strong>
+            <p>Force-quit Terminal Conductor (<kbd>⌘⌥Esc</kbd> → Terminal Conductor → Force Quit) and relaunch. The daemon preserves your PTYs, so your tabs and running agents will come back. If the blank-screen issue repeats, open <em>View → Toggle Developer Tools</em> and send us what's in the Console.</p>
+        </div>
+
+        <h3>Connections</h3>
+
+        <div class="faq-item">
+            <strong>How do I pin an SSH host?</strong>
+            <p>Click the caret next to the <code>+</code> button → <em>Recent</em> tab → hover a row → click the pin icon. Pinned entries never evict from the list.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Does Terminal Conductor type my SSH passwords?</strong>
+            <p>Only if you enable that feature. Turn on <em>Settings → Security → SSH auto-login</em>, enter the password once, and Terminal Conductor will auto-type it when it sees a matching password prompt. Passwords are stored with light obfuscation in <code>localStorage</code> — this is convenience, not security. Use keys for anything that matters.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Can I paste images into a container or SSH session?</strong>
+            <p>Yes. Copy an image, switch to the target tab, press <kbd>⌘V</kbd>. Terminal Conductor writes it to a temp file, transfers it to the right environment (local path, <code>docker cp</code>, or <code>scp</code> for Tailscale-authenticated SSH), and pastes the path into your prompt.</p>
+        </div>
+
+        <h3>Visual modes and borders</h3>
+
+        <div class="faq-item">
+            <strong>How do I change visual mode or border?</strong>
+            <p>Open the right panel → Appearance → Visual Mode / Border Decoration. Settings are per-tab by default; use groups to apply to several at once.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I turn off the JARVIS HUD border?</strong>
+            <p>The JARVIS HUD is bound to the JARVISmaxxing visual mode. Switch to a different visual mode and the border changes with it. Or turn off <em>Force mode borders</em> in Settings → Appearance to decouple mode and border.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Can I use the 1992 skin on a modern macOS?</strong>
+            <p>Yes — it's purely cosmetic. All functionality is identical. Turn it on via Settings → Appearance → Skin.</p>
+        </div>
+
+        <h3>Privacy and data</h3>
+
+        <div class="faq-item">
+            <strong>Where is my data stored?</strong>
+            <p><code>~/Library/Application Support/TerminalConductor/</code> (session database, scrollback, persisted state) and <code>~/Library/Preferences/</code> (app settings). Nothing leaves your Mac.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I wipe all Terminal Conductor data?</strong>
+            <p>Quit the App, then delete the directories in the previous answer. See the <a href="/privacy">Privacy Policy</a>, Section 7, for the full step-by-step.</p>
+        </div>
+
+        <h2>Bug reports &amp; feature requests</h2>
+        <p>Email us at <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>. For bugs, please use the template described at the top of this page. For feature requests, a short description of the workflow you're trying to support helps us prioritize.</p>
+
+        <footer>
+            <p>&copy; 2026 Mark Huthmaker, operating as Armchair Caesars. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

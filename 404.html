@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Found — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: #06090f;
+            color: #c4d4de;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .box { text-align: center; max-width: 480px; }
+        .code { color: #6fdcff; font-size: 0.9em; margin-bottom: 24px; }
+        h1 { font-size: 2.4em; color: #e8f3f9; margin-bottom: 12px; letter-spacing: -0.5px; }
+        p { color: #8298a6; margin-bottom: 28px; line-height: 1.6; }
+        a {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid rgba(111, 220, 255, 0.35);
+            border-radius: 999px;
+            color: #6fdcff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+        a:hover { background: rgba(111, 220, 255, 0.1); }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="code">$ tc tab --find {{path}}<br>→ exit 404</div>
+        <h1>Tab not found</h1>
+        <p>The page you were looking for isn't here. Maybe it was closed, moved, or never opened.</p>
+        <a href="/">← Back to Terminal Conductor</a>
+    </div>
+</body>
+</html>
