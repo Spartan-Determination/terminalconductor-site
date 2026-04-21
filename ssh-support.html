@@ -152,8 +152,13 @@
         </div>
 
         <div class="faq-item">
+            <strong>Where do I put my custom slash-commands?</strong>
+            <p>Open <em>Settings → Agent Integration → Commands &amp; agents folders</em> and click <em>Claude commands</em>, <em>Codex prompts</em>, <em>Gemini commands</em>, or <em>Claude agents</em>. Finder opens the folder; drop <code>.md</code> files in and they appear in the right panel. On connect, Terminal Conductor SSH uploads those folders to the remote so your commands work there too.</p>
+        </div>
+
+        <div class="faq-item">
             <strong>My custom slash-command isn't recognized on the remote. What's wrong?</strong>
-            <p>Custom commands live in <code>~/.claude/commands/</code>, <code>~/.codex/prompts/</code>, or <code>~/.gemini/commands/</code>. Terminal Conductor SSH uploads these to the remote on every connect. If a command still isn't recognized, make sure the agent is fully restarted after connecting (some agents load commands once at startup), and check that the files exist in the expected local paths on your Mac.</p>
+            <p>Make sure the agent was restarted after connecting (some agents load commands once at startup). If it's still unrecognized, re-open <em>Settings → Agent Integration → Commands &amp; agents folders</em> and confirm the <code>.md</code> file is actually there — the folder on first launch only contains a single <code>welcome.md</code> example.</p>
         </div>
 
         <div class="faq-item">
