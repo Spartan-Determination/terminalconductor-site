@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — Terminal Conductor SSH</title>
-    <meta name="description" content="Support and FAQ for Terminal Conductor SSH — the Mac App Store edition for developers running AI coding agents over SSH.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -37,17 +36,6 @@
             border-radius: 4px;
             font-size: 0.88em;
         }
-        kbd {
-            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.7);
-            color: #c4dfec;
-            padding: 2px 7px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            border: 1px solid rgba(111, 220, 255, 0.15);
-            border-bottom: 2px solid rgba(111, 220, 255, 0.2);
-        }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
         .contact-box {
             background: rgba(10, 42, 58, 0.5);
             border: 1px solid rgba(111, 220, 255, 0.25);
@@ -81,33 +69,37 @@
 </head>
 <body>
     <div class="container">
-        <a href="/ssh" class="back">← Back to Terminal Conductor SSH</a>
         <h1>Support</h1>
-        <p class="subtitle">Questions, bug reports, and feature requests — all welcome.</p>
+        <p class="subtitle">Bug reports, feature requests, and questions — all welcome.</p>
 
         <div class="contact-box">
-            <p>Primary contact:</p>
+            <p>Primary contact for anything not answered below:</p>
             <p><a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a></p>
             <p style="color: #7a8994; font-size: 0.9em;">We typically respond within one business day.</p>
         </div>
 
-        <h2>Before you write in</h2>
+        <h2>Before You Write In</h2>
         <p>Most "how do I…" questions are covered in the FAQ below. For bug reports, please include:</p>
         <ul>
             <li>macOS version (<em>About This Mac → More Info → macOS</em>).</li>
             <li>Terminal Conductor SSH version (<em>Terminal Conductor SSH menu → About</em>).</li>
             <li>What you did, what you expected, what happened instead.</li>
-            <li>The SSH server you were connecting to (OS and version, if you know it).</li>
-            <li>Any red entries in <em>View → Toggle Developer Tools → Console</em>.</li>
+            <li>Any red entries in the Console tab of <em>View → Toggle Developer Tools</em>.</li>
+            <li>If the App crashed: the most recent crash log from <code>~/Library/Logs/DiagnosticReports/</code>.</li>
         </ul>
 
-        <h2>FAQ</h2>
+        <h2>Frequently Asked Questions</h2>
 
         <h3>General</h3>
 
         <div class="faq-item">
             <strong>What is Terminal Conductor SSH?</strong>
-            <p>A macOS application that lets you manage many SSH sessions as named, color-coded, persistent tabs in a single window. Built for developers who run AI coding agents (Claude Code, Codex CLI, Gemini CLI) on remote hosts.</p>
+            <p>Terminal Conductor SSH is a macOS application that wraps your remote SSH sessions with identity, context, memory, and orchestration. It's built for developers running multiple AI coding agents alongside remote shells over SSH.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Does it replace my remote shell or dotfiles?</strong>
+            <p>No. Terminal Conductor SSH starts your normal login shell on the remote (zsh, bash, fish — whatever your <code>$SHELL</code> is there). Your aliases, prompts, plugins, and tools behave exactly as they always have.</p>
         </div>
 
         <div class="faq-item">
@@ -116,62 +108,52 @@
         </div>
 
         <div class="faq-item">
-            <strong>Does it replace my remote shell or dotfiles?</strong>
-            <p>No. It launches your normal login shell on the remote (zsh, bash, fish — whatever your <code>$SHELL</code> is there). Your aliases, prompts, plugins, and tools behave exactly as they always have.</p>
-        </div>
-
-        <div class="faq-item">
             <strong>Is any data sent to the cloud?</strong>
-            <p>No. Zero telemetry, no external servers. All state — session database, credentials (if saved), settings — lives locally in your App Support container. See the <a href="/privacy">Privacy Policy</a> for the full breakdown.</p>
+            <p>No. Terminal Conductor SSH has zero telemetry and no external servers. All state lives locally. See the <a href="/privacy">Privacy Policy</a> for the full breakdown.</p>
         </div>
 
-        <h3>Connecting</h3>
+        <h3>Tabs, groups, and workspaces</h3>
 
         <div class="faq-item">
-            <strong>How do I connect to an SSH host?</strong>
-            <p>Click the <code>+</code> button to open a new tab. A prompt appears inside the terminal: <code>Connect to ssh user@host:</code>. Type <code>user@host</code> and press Enter. If the host isn't in your saved credentials, you'll be prompted for the password inline — no popup, no modal.</p>
-        </div>
-
-        <div class="faq-item">
-            <strong>How do I save a password for a host?</strong>
-            <p>Open <em>Settings → Terminal</em>. Under <em>Saved SSH credentials</em>, add an entry with <code>user@host</code> and the password. Next time you connect to that host, Terminal Conductor SSH skips the password prompt entirely.</p>
+            <strong>How do I create a tab?</strong>
+            <p>Click the <code>+</code> button in the tab bar, or press <kbd>⌘T</kbd>. A prompt appears inside the tab: <code>Connect to ssh user@host:</code>. Click the caret next to <code>+</code> to pick a Pinned or Recent connection instead.</p>
         </div>
 
         <div class="faq-item">
-            <strong>How are saved passwords stored?</strong>
-            <p>Locally, in the app's sandbox container, with light obfuscation. This is convenience, not a security guarantee. For anything that matters, use SSH keys.</p>
+            <strong>How do I group tabs?</strong>
+            <p>Right-click a tab → <em>Add to group</em> → pick an existing group or create a new one. Grouped tabs render with a colored bar above them and can be acted on together (broadcast, briefing, etc.).</p>
         </div>
 
         <div class="faq-item">
-            <strong>How do I pin a host?</strong>
-            <p>Click the caret next to the <code>+</code> button → <em>Recent</em> tab → hover a row → click the pin icon. Pinned entries never evict.</p>
+            <strong>How do I split a tab into multiple columns?</strong>
+            <p>Right-click the tab → <em>Split view</em> → choose 2–5 columns. Press <kbd>Esc</kbd> to collapse.</p>
         </div>
 
         <div class="faq-item">
-            <strong>My SSH connection drops after a while. Why?</strong>
-            <p>Terminal Conductor SSH sets <code>ServerAliveInterval</code> automatically and sends a null-byte keepalive ping, so most NAT/firewall idle drops are prevented. If your network is especially aggressive, increase the ping frequency in <em>Settings → Terminal → Connection</em>.</p>
+            <strong>Tabs are auto-named "Tab A", "Tab B" — how do I rename?</strong>
+            <p>Click the tab's color dot or long-press the tab; a label editor appears. Once a label is set, it takes priority over the auto-name.</p>
         </div>
 
         <h3>AI agents</h3>
 
         <div class="faq-item">
-            <strong>Which agents are auto-detected?</strong>
-            <p>Claude Code, Codex CLI, Gemini CLI, and Aider. Detection is based on the agent's terminal output, so it works as long as the agent actually runs on the remote. Other CLI-based agents work too — you just won't get the color gradient and agent badge.</p>
+            <strong>Which AI agents does Terminal Conductor SSH support?</strong>
+            <p>Any that run in a terminal on the remote. Auto-detection is built for Claude Code, Codex CLI, Gemini CLI, and Aider, including model-name recognition where the agent exposes it. Other CLI-based agents still work — you just won't get the badge.</p>
         </div>
 
         <div class="faq-item">
             <strong>What is <code>@tab:</code>?</strong>
-            <p>Type <code>@tab:</code> in any terminal to open a picker listing your other tabs. Select one and Terminal Conductor SSH injects a formatted context block — identity, recent output, activity — into your current prompt. <code>@group:</code> does the same for whole groups.</p>
+            <p>Type <code>@tab:</code> in any terminal to open a picker listing other tabs. Select one and Terminal Conductor SSH injects a formatted context block — identity, recent output, activity — into your current prompt. <code>@group:</code> does the same for whole groups.</p>
         </div>
 
         <div class="faq-item">
             <strong>How does <code>/fork</code> work?</strong>
-            <p>Type <code>/fork</code> in any Claude, Codex, or Gemini tab. Terminal Conductor SSH captures the resume command, opens a new tab with the same SSH login, and runs that resume command in both — you now have two tabs resuming the same conversation, diverging from there.</p>
+            <p>In any agent tab, type <code>/fork</code>. Terminal Conductor SSH captures the resume command, creates a paired child tab with the same SSH login, and runs the resume command in both — you now have two tabs resuming the same conversation, diverging from there. Works for Claude Code and Codex out of the box; for Gemini we built our own fork flow because the official CLI didn't ship one.</p>
         </div>
 
         <div class="faq-item">
             <strong>My custom slash-command isn't recognized on the remote. What's wrong?</strong>
-            <p>Custom commands live in <code>~/.claude/commands/</code>, <code>~/.codex/prompts/</code>, or <code>~/.gemini/commands/</code>. Terminal Conductor SSH uploads these to the remote on every connect. If a command still isn't recognized: make sure the agent is fully restarted after connecting (some agents load commands once at startup), and check that the files exist in the expected local paths on your Mac.</p>
+            <p>Custom commands live in <code>~/.claude/commands/</code>, <code>~/.codex/prompts/</code>, or <code>~/.gemini/commands/</code>. Terminal Conductor SSH uploads these to the remote on every connect. If a command still isn't recognized, make sure the agent is fully restarted after connecting (some agents load commands once at startup), and check that the files exist in the expected local paths on your Mac.</p>
         </div>
 
         <div class="faq-item">
@@ -179,26 +161,48 @@
             <p>That's Codex's required slash-command syntax — leading <code>/prompts:</code> and a trailing <code>/</code>. Terminal Conductor SSH renders Codex commands in that format in the right panel so clicking them types the correct string.</p>
         </div>
 
-        <h3>Session persistence</h3>
+        <h3>Sessions and persistence</h3>
 
         <div class="faq-item">
-            <strong>What happens when I quit the app?</strong>
-            <p>Each SSH tab runs inside a named tmux session on the remote. Quitting the app disconnects the SSH client but leaves tmux running on the remote. Relaunching reconnects and reattaches — your agent conversations and shell state are preserved exactly.</p>
+            <strong>What happens when I quit the App?</strong>
+            <p>Each SSH tab is wrapped in a named tmux session on the remote. Quitting the App disconnects the SSH client but leaves the tmux session running on the remote host. Relaunching Terminal Conductor SSH reconnects and reattaches — your agent conversations and shell state are preserved exactly.</p>
         </div>
 
         <div class="faq-item">
             <strong>What if the remote doesn't have tmux?</strong>
-            <p>Tabs still work — they fall through to a plain shell — but they can't persist across app restarts. Install tmux on the remote for full persistence. <code>brew install tmux</code> on macOS, <code>apt install tmux</code> on Debian/Ubuntu, <code>yum install tmux</code> on RHEL/CentOS.</p>
+            <p>Tabs still work — they fall through to a plain shell — but they can't persist across App restarts. Install tmux on the remote for full persistence. <code>brew install tmux</code> on macOS, <code>apt install tmux</code> on Debian/Ubuntu, <code>yum install tmux</code> on RHEL/CentOS.</p>
         </div>
 
         <div class="faq-item">
-            <strong>I closed a tab by accident — can I reattach?</strong>
-            <p>Yes. Clicking <kbd>×</kbd> on a tab detaches rather than kills it. Click the caret next to the <code>+</code> button; detached sessions appear in the dropdown. Click to reattach — same remote, same tmux session, same agent conversation.</p>
+            <strong>I accidentally closed a tab — can I get it back?</strong>
+            <p>Yes. Clicking <kbd>×</kbd> on a tab detaches rather than kills it. Click the caret next to the <code>+</code> button to see detached sessions and reattach — same remote, same tmux session, same agent conversation.</p>
         </div>
 
         <div class="faq-item">
             <strong>How do I permanently terminate a session?</strong>
-            <p>Click the red trash icon next to Restart in the identity bar. Confirm by clicking again within a few seconds. The remote tmux session is killed, the database row is removed, and a fresh <em>Connect</em> prompt appears.</p>
+            <p>Click the red trash icon next to Restart in the identity bar. Confirm by clicking again within a few seconds. The remote tmux session is killed, the local database row is removed, and a fresh <em>Connect</em> prompt appears.</p>
+        </div>
+
+        <h3>Connections</h3>
+
+        <div class="faq-item">
+            <strong>How do I connect to an SSH host?</strong>
+            <p>Click <code>+</code> to open a new tab. Type <code>user@host</code> at the <code>Connect to ssh user@host:</code> prompt and press Enter. If the host isn't in your saved credentials, you'll be prompted for the password inline — no popup, no modal.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I pin an SSH host?</strong>
+            <p>Click the caret next to the <code>+</code> button → <em>Recent</em> tab → hover a row → click the pin icon. Pinned entries never evict from the list.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Does Terminal Conductor SSH type my SSH passwords?</strong>
+            <p>Only if you enable that feature. Add an entry for <code>user@host</code> under <em>Settings → Terminal → Saved SSH credentials</em>, enter the password once, and Terminal Conductor SSH will use it the next time you connect to that host. Passwords are stored with light obfuscation inside the App's sandbox container — this is convenience, not security. Use keys for anything that matters.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>My SSH connection drops after a while. Why?</strong>
+            <p>Terminal Conductor SSH sets <code>ServerAliveInterval</code> automatically and sends a null-byte keepalive ping, so most NAT and firewall idle drops are prevented. If your network is especially aggressive, adjust the ping frequency in <em>Settings → Terminal → Connection</em>.</p>
         </div>
 
         <h3>Remote environment</h3>
@@ -214,46 +218,46 @@
         </div>
 
         <div class="faq-item">
-            <strong>What's in the bottom panel for an SSH tab?</strong>
-            <p>Summary of recent activity, test results (if the agent ran tests), env-delta, an in-flight process strip showing the remote foreground + services, and a GitHub PR row (if <code>gh</code> is authenticated on the remote).</p>
-        </div>
-
-        <div class="faq-item">
             <strong>The GitHub PR row is empty. Why?</strong>
             <p>It requires <code>gh</code> to be installed and authenticated on the <strong>remote</strong> host (not your Mac). Run <code>gh auth login</code> there. The row scopes to the first git repo it finds in your remote home directory.</p>
         </div>
 
-        <h3>Visual modes and appearance</h3>
+        <h3>Visual modes and borders</h3>
 
         <div class="faq-item">
-            <strong>How do I change the visual mode?</strong>
-            <p>Open the right panel → <em>Appearance</em> → <em>Visual Mode</em>. Settings are per-tab by default — you can make all SSH tabs in a group look the same by changing the group's default, or leave them independent.</p>
+            <strong>How do I change visual mode or border?</strong>
+            <p>Open the right panel → Appearance → Visual Mode / Border Decoration. Settings are per-tab by default; use groups to apply to several at once.</p>
         </div>
 
         <div class="faq-item">
-            <strong>Can I use the 1992 skin on modern macOS?</strong>
-            <p>Yes. It's purely cosmetic — no behavior differences. Turn it on via <em>Settings → Appearance → Skin</em>.</p>
+            <strong>How do I turn off the JARVIS HUD border?</strong>
+            <p>The JARVIS HUD is bound to the JARVISmaxxing visual mode. Switch to a different visual mode and the border changes with it. Or turn off <em>Force mode borders</em> in Settings → Appearance to decouple mode and border.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Can I use the 1992 skin on a modern macOS?</strong>
+            <p>Yes — it's purely cosmetic. All functionality is identical. Turn it on via Settings → Appearance → Skin.</p>
         </div>
 
         <h3>Privacy and data</h3>
 
         <div class="faq-item">
             <strong>Where is my data stored?</strong>
-            <p>Inside the app's sandbox container: <code>~/Library/Containers/com.terminalconductor.ssh/Data/</code>. Session database, saved credentials, settings, scrollback — all local. Nothing leaves your Mac.</p>
+            <p>Inside the App's sandbox container: <code>~/Library/Containers/com.terminalconductor.ssh/Data/</code>. Session database, saved credentials (if any), settings, scrollback — all local. Nothing leaves your Mac.</p>
         </div>
 
         <div class="faq-item">
-            <strong>How do I wipe all data?</strong>
-            <p>Quit the app, then delete <code>~/Library/Containers/com.terminalconductor.ssh/</code>. Reinstalling gives you a clean slate.</p>
+            <strong>How do I wipe all Terminal Conductor SSH data?</strong>
+            <p>Quit the App, then delete <code>~/Library/Containers/com.terminalconductor.ssh/</code>. Reinstalling gives you a clean slate. See the <a href="/privacy">Privacy Policy</a>, Section 7, for the full step-by-step.</p>
         </div>
 
         <div class="faq-item">
             <strong>Are passwords ever saved to shell history or scrollback?</strong>
-            <p>No. A two-phase password scrubber drops password-prompt responses before they ever reach the Recent list, activity events, or scrollback. Additionally, passwords entered in the in-terminal SSH auth prompt go directly to the SSH library without touching the terminal output buffer.</p>
+            <p>No. A two-phase password scrubber drops password-prompt responses before they reach the Recent list, activity events, or scrollback. Passwords entered in the in-terminal SSH auth prompt go directly to the SSH library without ever touching the terminal output buffer.</p>
         </div>
 
         <h2>Bug reports &amp; feature requests</h2>
-        <p>Email <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>. For bugs, use the template at the top of this page. For feature requests, a one-sentence description of the workflow you're trying to support helps us prioritize.</p>
+        <p>Email us at <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>. For bugs, please use the template described at the top of this page. For feature requests, a short description of the workflow you're trying to support helps us prioritize.</p>
 
         <footer>
             <p>&copy; 2026 Mark Huthmaker, operating as Armchair Caesars. All rights reserved.</p>
