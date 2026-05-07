@@ -8,8 +8,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #06090f;
-            color: #c4d4de;
+            background: #fcfbf8;
+            color: #5a4e3f;
             line-height: 1.7;
         }
         .layout { display: flex; max-width: 1100px; margin: 0 auto; padding: 40px 24px; gap: 48px; }
@@ -26,71 +26,71 @@
             font-size: 0.7em;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 12px;
         }
         nav.toc ul { list-style: none; padding: 0; }
         nav.toc li { margin-bottom: 4px; }
         nav.toc a {
             font-size: 0.85em;
-            color: #8298a6;
+            color: #8a7f6d;
             text-decoration: none;
             line-height: 1.5;
             display: block;
             padding: 3px 0;
         }
-        nav.toc a:hover { color: #6fdcff; }
+        nav.toc a:hover { color: #8a6a2c; }
         .content { flex: 1; min-width: 0; }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; text-decoration: none; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; text-decoration: none; }
         .back:hover { text-decoration: underline; }
         h1 {
             font-size: 2.25em;
             font-weight: 700;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
-        .subtitle { color: #7a8994; margin-bottom: 40px; font-size: 1em; }
+        .subtitle { color: #8a7f6d; margin-bottom: 40px; font-size: 1em; }
         h2 {
             font-size: 1.4em;
-            color: #e8f3f9;
+            color: #1a1510;
             margin: 56px 0 16px;
             padding-top: 8px;
             letter-spacing: -0.3px;
         }
         h3 {
             font-size: 1.05em;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin: 24px 0 10px;
             letter-spacing: -0.1px;
         }
-        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 10px; }
-        strong { color: #d3e2eb; font-weight: 600; }
-        em { color: #c4d4de; }
+        p, li { font-size: 0.95em; color: #5a4e3f; margin-bottom: 10px; }
+        strong { color: #1a1510; font-weight: 600; }
+        em { color: #5a4e3f; }
         ul, ol { padding-left: 22px; margin-bottom: 16px; }
-        a { color: #6fdcff; text-decoration: none; }
+        a { color: #8a6a2c; text-decoration: none; }
         a:hover { text-decoration: underline; }
         kbd {
             font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.7);
-            color: #c4dfec;
+            background: rgba(138, 106, 44, 0.1);
+            color: #5a4e3f;
             padding: 2px 7px;
             border-radius: 4px;
             font-size: 0.85em;
-            border: 1px solid rgba(111, 220, 255, 0.15);
-            border-bottom: 2px solid rgba(111, 220, 255, 0.2);
+            border: 1px solid rgba(138, 106, 44, 0.18);
+            border-bottom: 2px solid rgba(138, 106, 44, 0.25);
         }
         code {
             font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.6);
-            color: #a9e4ff;
+            background: rgba(138, 106, 44, 0.08);
+            color: #8a6a2c;
             padding: 2px 6px;
             border-radius: 4px;
             font-size: 0.88em;
         }
         pre {
-            background: rgba(10, 42, 58, 0.55);
-            border: 1px solid rgba(111, 220, 255, 0.15);
+            background: rgba(138, 106, 44, 0.07);
+            border: 1px solid rgba(138, 106, 44, 0.18);
             border-radius: 8px;
             padding: 14px 18px;
             margin: 12px 0 20px;
@@ -99,31 +99,38 @@
         pre code {
             background: none;
             padding: 0;
-            color: #c4dfec;
+            color: #5a4e3f;
             font-size: 0.85em;
             line-height: 1.6;
         }
         .callout {
-            background: rgba(10, 42, 58, 0.5);
-            border-left: 3px solid #6fdcff;
+            background: rgba(138, 106, 44, 0.06);
+            border-left: 3px solid #8a6a2c;
             border-radius: 6px;
             padding: 14px 18px;
             margin: 16px 0;
         }
-        .callout p { margin-bottom: 0; color: #c4dfec; }
+        .callout p { margin-bottom: 0; color: #5a4e3f; }
         footer {
             text-align: center;
             padding: 40px 0 16px;
             font-size: 0.85em;
-            color: #556671;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
             margin-top: 72px;
         }
         @media (max-width: 768px) {
             .layout { flex-direction: column; gap: 24px; }
             nav.toc { position: static; width: auto; max-height: none; }
         }
+    
+        /* v2 palette overrides */
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="layout">
@@ -137,10 +144,14 @@
                 <li><a href="#crosstab">Cross-tab orchestration</a></li>
                 <li><a href="#persistence">Session persistence</a></li>
                 <li><a href="#connections">Connections</a></li>
+                <li><a href="#managedssh">Managed SSH transport</a></li>
                 <li><a href="#safety">Safety &amp; security</a></li>
                 <li><a href="#panels">Panels &amp; productivity</a></li>
                 <li><a href="#visual">Visual modes &amp; borders</a></li>
                 <li><a href="#skins">Skins (Default, Browser, 1992)</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#theme">Light &amp; dark theme</a></li>
+                <li><a href="#updates">Updates</a></li>
                 <li><a href="#privacy">Privacy &amp; local-first</a></li>
                 <li><a href="#shortcuts">Keyboard shortcuts</a></li>
                 <li><a href="#troubleshoot">Troubleshooting</a></li>
@@ -155,12 +166,12 @@
             <section id="quickstart">
                 <h2>Quick start</h2>
                 <ol>
-                    <li>Install Terminal Conductor from the Mac App Store (or direct download).</li>
+                    <li>Install Terminal Conductor. The full edition is available as a notarized direct download from terminalconductor.com; the SSH-only edition is on the Mac App Store.</li>
                     <li>Launch it. The first tab opens your default shell in your home directory.</li>
-                    <li>Press <kbd>⌘T</kbd> for a new tab; <kbd>⌘W</kbd> to close.</li>
+                    <li>Press <kbd>⌘T</kbd> for a new tab; <kbd>⌘W</kbd> to close (or detach, depending on your settings).</li>
                     <li>Open the right panel (<kbd>⌘⇧R</kbd>) to discover agent commands and custom slash commands.</li>
                     <li>Open the bottom panel (<kbd>⌘⇧B</kbd>) to see live state — Active Processes, PR status, test results.</li>
-                    <li>Right-click any tab for grouping, splitting, renaming, color.</li>
+                    <li>Right-click any tab for grouping, splitting, renaming, color, and Resume Commands.</li>
                 </ol>
                 <p>That's enough to be productive. Everything below is for when you want more.</p>
             </section>
@@ -172,8 +183,10 @@
                     <li>Your existing <code>$SHELL</code> — zsh, bash, fish — runs unmodified. Your dotfiles, aliases, prompts, and plugins work as they always have.</li>
                     <li>Copy/paste, selection, scrollback, and resize behave like any native terminal.</li>
                     <li>Font family and size are configurable globally (<em>Settings → Appearance → Font</em>) or per-tab.</li>
-                    <li>Tabs can be reordered by dragging.</li>
-                    <li>Per-tab shell history is available: toggle <em>Settings → Terminal → Per-tab HISTFILE</em> so up-arrow recalls only that tab's history.</li>
+                    <li>Tabs can be reordered by dragging — the order persists across launches.</li>
+                    <li>Per-tab shell history: toggle <em>Settings → Terminal → Per-tab HISTFILE</em> so up-arrow recalls only that tab's history.</li>
+                    <li><strong>Wheel scrollback for tmux remotes.</strong> The mouse wheel synthesizes <kbd>Ctrl-B</kbd> + <kbd>[</kbd> + arrows + <kbd>q</kbd> so scrolling up enters tmux copy-mode and scrolling down exits — no need to enable mouse mode in tmux. <kbd>⌘C</kbd> and <kbd>⌘A</kbd> still work for native copy/select-all.</li>
+                    <li><strong>Click-to-position cursor.</strong> Click anywhere in the prompt line and Terminal Conductor synthesizes the arrow keystrokes that move the shell's cursor there. Works in zsh, bash, and most TUIs.</li>
                 </ul>
             </section>
 
@@ -181,15 +194,19 @@
                 <h2>Identity &amp; auto-detection</h2>
                 <p>The identity bar sits below the tab bar and updates in real time for the active tab. It combines signals from the process tree, output buffer, <code>git</code>, <code>lsof</code>, and the environment to show:</p>
                 <ul>
-                    <li><strong>Color + label.</strong> Your chosen identity for this tab.</li>
-                    <li><strong>Agent badge.</strong> Claude Code, Codex CLI, Gemini CLI, Aider, or a generic shell icon. Model name appears when available.</li>
+                    <li><strong>Color + label.</strong> Your chosen identity for this tab. Tabs without an explicit label fall back to <em>Tab A</em> / <em>Tab B</em> / <em>Tab C</em> based on order.</li>
+                    <li><strong>Agent badge with color gradient.</strong> Six first-class coding agents are recognized: <strong>Claude Code</strong> (orange), <strong>Codex CLI</strong> (blue), <strong>Gemini CLI</strong> (purple), <strong>Aider</strong> (hot pink), <strong>Kimi Code CLI</strong> (gold), and <strong>Qwen Code CLI</strong> (cherry-blossom pink). Model name appears when the agent exposes it.</li>
+                    <li><strong>Multilingual agent detection.</strong> Qwen banners in Simplified Chinese (<code>通义千问</code>) or Traditional Chinese (<code>通義千問</code>) light the cherry-blossom-pink gradient just like the English brand. Kimi banners with <code>月之暗面</code> (Moonshot AI's company name) trigger the gold gradient.</li>
                     <li><strong>Safety chip.</strong> LOCAL / DOCKER / SSH / PROD / STAGING / DEV / ROOT — color-coded so you always know which machine you're typing into.</li>
                     <li><strong>Git state.</strong> Branch, dirty marker, uncommitted count, ahead/behind.</li>
                     <li><strong>Framework chip.</strong> Next.js, Vite, Cargo, Django, etc., detected from project files.</li>
                     <li><strong>Foreground command.</strong> What's actually running in the PTY, with a runtime counter.</li>
-                    <li><strong>GitHub PR row.</strong> Open PR for the current branch with CI status and review state, refreshed every 30 seconds via <code>gh</code>.</li>
+                    <li><strong>GitHub PR row.</strong> Open PR for the current branch with CI status and review state, refreshed every 30 seconds via the host <code>gh</code> CLI.</li>
                 </ul>
-                <p>Detection combines two signals: the process tree (primary, via <code>sysinfo</code>) and output-buffer inference (fallback, when argv can't be read — for example, <code>docker</code> argv on macOS). A 5-minute latch prevents flicker when an agent transiently drops off the process tree.</p>
+                <p>Detection combines two signals: the process tree (primary, via <code>sysinfo</code>) and output-buffer inference (fallback, when argv can't be read — for example, <code>docker</code> argv on macOS, or any tab opened through the managed-SSH transport). A 5-minute latch prevents flicker when an agent transiently drops off the process tree.</p>
+
+                <h3>Tab activity pulse</h3>
+                <p>Every tab — active and background — shows a small live pulse indicator the moment its agent or shell starts producing output. Toggle in <em>Settings → Interaction → Tab activity pulse</em>.</p>
             </section>
 
             <section id="tabs">
@@ -239,13 +256,12 @@
                 <p>On the group header, click <em>Briefing</em>. Terminal Conductor creates a new tab labeled <em>Briefing: [GroupName]</em> with a formatted situation report of every tab in the group — branches, dirty state, recent output, last activity. Useful for syncing a team of agents or catching up after lunch.</p>
 
                 <h3>Fork orchestration</h3>
-                <p>In any agent tab, type <code>/fork</code> (or <code>/branch</code> in Claude). Terminal Conductor:</p>
-                <ol>
-                    <li>Captures the resume command from the agent's output.</li>
-                    <li>Creates a paired child tab.</li>
-                    <li>Enters the resume command in both — both tabs resume the same conversation, diverging from there.</li>
-                </ol>
-                <p>Works out of the box for Claude Code and Codex. For Gemini, we built our own fork flow because the official CLI didn't ship one. For Claude's "transcript too large to branch" case, we bypass the in-TUI check and force the fork.</p>
+                <p>In any agent tab, type <code>/fork</code> (or <code>/branch</code> in Claude). Terminal Conductor captures the resume token, creates a paired child tab, and resumes the conversation in both — they share the same starting point and diverge from there. Each agent gets the orchestration that best matches its TUI:</p>
+                <ul>
+                    <li><strong>Claude Code</strong> — switcheroo flow. Parent stays in place; new tab resumes the prior session.</li>
+                    <li><strong>Codex CLI, Gemini CLI, Kimi Code CLI, Qwen Code CLI</strong> — right-side fork. The parent tab is renamed <em>Original</em>, a new <em>Fork N</em> tab opens to the right, and both resume the same conversation UUID. Double-Ctrl-C exit is automated where the agent supports it.</li>
+                </ul>
+                <p>Bypass-permission flags propagate when documented (Claude's <code>--dangerously-skip-permissions</code>, Codex's <code>--full-auto</code>, Gemini's <code>--yolo</code>). When the parent tab has a friendly display name from the Connect dialog (e.g. "Dev Box"), the fork inherits it: <em>Dev Box Original</em> / <em>Dev Box Fork 1</em>.</p>
 
                 <h3>Disabling the mention picker</h3>
                 <p>If <code>@</code>-interception causes problems in a specific workflow, turn off <em>Settings → Interaction → Mention picker</em>.</p>
@@ -296,17 +312,37 @@
                 </ul>
                 <p>Replay from Bottom Panel → Resume. Terminal Conductor finds or creates a target tab matching the saved environment and runs the command. When you replay across environments — e.g. a saved local command into a Docker tab — the command is auto-wrapped (<code>docker exec -it</code> or <code>ssh host</code>) so it still reaches the right shell.</p>
 
-                <h3>Optional SSH auto-login</h3>
-                <p>Enable <em>Settings → Security → SSH auto-login</em>, enter the password when prompted once, and Terminal Conductor will auto-type it on future matching prompts. Stored lightly obfuscated in <code>localStorage</code> — convenience, not a security boundary.</p>
+                <h3>Saved SSH credentials (Keychain-backed)</h3>
+                <p>Pin a connection in the Connect dialog and save its password (or private-key passphrase). Terminal Conductor stores it in the platform-native credential store — macOS Keychain, Windows Credential Manager, or the Linux kernel keyring — via the cross-platform <code>keyring</code> Rust crate. On reconnect, credentials are read out and used to authenticate without prompting. You can verify and revoke entries any time in <em>Keychain Access.app</em> (service name <code>com.terminalconductor.app</code>). Prior versions used an obfuscated <code>localStorage</code> field; legacy entries are migrated automatically on first launch and the localStorage value is wiped.</p>
 
                 <h3>Image paste</h3>
-                <p>Copy an image to the clipboard, switch to a tab, press <kbd>⌘V</kbd>. Terminal Conductor:</p>
+                <p>Copy an image to the clipboard, switch to a tab, press <kbd>⌘V</kbd>. Terminal Conductor writes the image to a temp file under <code>~/tc-images/</code> and then routes the path to the tab's environment:</p>
                 <ul>
-                    <li>Writes the image to a temp file (<code>~/tc-images/</code>).</li>
-                    <li>For LOCAL tabs: pastes the path.</li>
-                    <li>For DOCKER tabs: copies via <code>docker cp</code> to <code>/tmp/tc-images/</code> in the container, pastes the in-container path.</li>
-                    <li>For SSH tabs with key auth or Tailscale ControlMaster: <code>scp</code>s to the remote host.</li>
+                    <li><strong>LOCAL tabs:</strong> pastes the local path directly.</li>
+                    <li><strong>DOCKER tabs:</strong> copies via <code>docker cp</code> to <code>/tmp/tc-images/</code> inside the container, pastes the in-container path.</li>
+                    <li><strong>Managed-SSH tabs:</strong> streams the image bytes through the russh exec channel (<code>cat &gt; /tmp/tc-images/&lt;name&gt;</code>) and pastes the remote path. Works without scp, sftp, or ControlMaster setup.</li>
                 </ul>
+            </section>
+
+            <section id="managedssh">
+                <h2>Managed SSH transport</h2>
+                <p>Saved Connect-dialog hosts use Terminal Conductor's own pure-Rust SSH client (<code>russh</code>), not the external <code>ssh</code> binary. Tabs you open by typing <code>ssh user@host</code> still use OpenSSH; managed-SSH only kicks in for hosts you've saved with credentials. Engaging the russh transport unlocks several conveniences:</p>
+
+                <h3>Public-key authentication</h3>
+                <p>In the Connect dialog's saved-connection form, switch the auth method radio to <em>Key</em> and provide a path to your private key (e.g. <code>~/.ssh/id_ed25519</code>) and an optional passphrase. The passphrase, if set, is stored in the same platform Keychain as passwords (under a separate <code>keypass:&lt;host&gt;</code> account). Supported key formats: OpenSSH PEM, encrypted or unencrypted, RSA / ECDSA / Ed25519.</p>
+
+                <h3>Drag-and-drop file upload</h3>
+                <p>Drag any file from Finder into a managed-SSH tab. Terminal Conductor uploads it to <code>/tmp/tc-files/&lt;name&gt;</code> on the remote host and pastes the path at the prompt. The 100 MB cap on a single file keeps a misclick from filling a server's <code>/tmp</code>; filenames are sanitized before being written.</p>
+
+                <h3>Port forwarding (-L and -R)</h3>
+                <p>Click the <em>Network</em> icon in the identity bar of a managed-SSH tab to open the Port Forwards dialog. Add local-to-remote (<code>-L</code>) or remote-to-local (<code>-R</code>) forwards on the fly. Forwards are session-scoped — they live as long as the tab does. Local forward example: bind <code>localhost:5432</code> on your Mac to <code>127.0.0.1:5432</code> on the remote, click Add, and your local Postgres client now talks to the remote database.</p>
+
+                <h3>OSC 7 cwd capture</h3>
+                <p>Modern shells (zsh, bash 5+, fish) emit an OSC 7 escape sequence (<code>\033]7;file://host/path\033\\</code>) on every prompt. Terminal Conductor parses these and updates the identity bar's cwd in real time for the remote tab. If your remote shell doesn't emit OSC 7, add this one-liner to your <code>~/.bashrc</code> or <code>~/.zshrc</code>:</p>
+                <pre><code>PROMPT_COMMAND='printf "\033]7;file://%s%s\033\\" "$HOSTNAME" "$PWD"'</code></pre>
+
+                <h3>Reconnect after drop</h3>
+                <p>If a managed-SSH tab loses its connection (network blip, server restart, laptop sleep), Terminal Conductor shows the disconnect banner with a one-click <em>Reconnect</em>. The reconnect re-authenticates with the saved credential, opens a fresh session, and swaps it in atomically — your tab survives the drop without the daemon having to re-spawn.</p>
             </section>
 
             <section id="safety">
@@ -314,6 +350,9 @@
 
                 <h3>Environment badges</h3>
                 <p>Every tab shows a safety tier in the identity bar: LOCAL, DOCKER, SSH, PROD, STAGING, DEV, ROOT. Colors are distinctive so you always know where a command is about to land.</p>
+
+                <h3>Platform Keychain integration</h3>
+                <p>Saved SSH passwords and private-key passphrases live in the operating system's native credential store: macOS Keychain (Security framework), Windows Credential Manager, or the Linux kernel keyring. Each platform's backend is wired in at build time via the cross-platform <code>keyring</code> Rust crate, so credentials never sit in plaintext on disk and never leave the system on which they were saved. You can audit and revoke entries directly in <em>Keychain Access.app</em> (look for the service <code>com.terminalconductor.app</code>). Earlier builds used an obfuscated <code>localStorage</code> field; that path was retired and existing entries migrate automatically on first launch of the new version.</p>
 
                 <h3>Password scrubbing</h3>
                 <p>A two-phase scrubber watches command input. Phase 1 detects password prompts in PTY output and drops the next submitted line entirely. Phase 2 regex-redacts inline secrets (<code>mysql -psecret</code>, <code>--password=…</code>, <code>API_KEY=…</code>) before they land in command history, Recent Connections, or activity events.</p>
@@ -328,10 +367,7 @@
                 </ul>
 
                 <h3>Docker container cleanup</h3>
-                <p>When you close the last tab on a given container, Terminal Conductor runs a cleanup pass inside the container (<code>pkill -TERM -f claude|codex|gemini|aider</code>) plus an idle-bash sweep, so you don't accumulate orphan shells.</p>
-
-                <h3>No Keychain</h3>
-                <p>Terminal Conductor does not write to the macOS Keychain. Optional SSH passwords live only in <code>localStorage</code>; everything else lives in the SQLite database. See <a href="/privacy">Privacy Policy</a> for the full breakdown.</p>
+                <p>When you close the last tab on a given container, Terminal Conductor runs a cleanup pass inside the container (<code>pkill -TERM -f claude|codex|gemini|aider|kimi|qwen</code>) plus an idle-bash sweep, so you don't accumulate orphan shells.</p>
             </section>
 
             <section id="panels">
@@ -341,8 +377,8 @@
                 <p>A single searchable palette for every command across every agent you use.</p>
                 <ul>
                     <li><strong>Saved conversations.</strong> Resume Commands you saved from prior agent sessions, with per-entry descriptions and bypass toggles. One-click to inject and resume.</li>
-                    <li><strong>Agent commands.</strong> Official commands for Claude Code, Codex, Gemini, Aider — discovered from your dotfiles and installed binaries.</li>
-                    <li><strong>Custom slash commands.</strong> Discovered from <code>.claude/commands/*.md</code>, <code>.codex/prompts/*.md</code>, <code>.gemini/commands/*.toml</code>.</li>
+                    <li><strong>Agent commands.</strong> Official commands for Claude Code, Codex, Gemini, Aider, Kimi, and Qwen — pulled from each project's upstream README and curated to avoid prompt-injection-laundered instructions from third-party sources.</li>
+                    <li><strong>Custom slash commands.</strong> Discovered from <code>.claude/commands/*.md</code>, <code>.codex/prompts/*.md</code>, <code>.gemini/commands/*.toml</code>, <code>.kimi/commands/*.md</code>, and <code>.qwen/commands/*.md</code>.</li>
                     <li><strong>Discovered subagents.</strong> Read from <code>.claude/agents/*.md</code> with YAML frontmatter parsing.</li>
                 </ul>
                 <p>Click any row to inject the command into the active tab — you review it at the prompt, then press <kbd>Enter</kbd>.</p>
@@ -376,22 +412,24 @@
                 <h2>Visual modes &amp; borders</h2>
 
                 <h3>Six visual modes</h3>
-                <p>Each mode combines a color palette, terminal theme, optional ANSI rewriter, and an auto-paired border.</p>
+                <p>Each mode combines a real background image (not just a palette), a terminal theme, an optional ANSI stream rewriter that recolors the agent's output to match, and an auto-paired border. All text in visual modes renders in <strong>bold</strong> regardless of WebGL acceleration so the styled glyphs stay legible against busy backgrounds.</p>
                 <ul>
-                    <li><strong>Normal</strong> — your chosen background and text preset.</li>
-                    <li><strong>JARVISmaxxing</strong> — holographic cyan-blue HUD, pulse animation, text halo, ANSI rewriter that normalizes Claude's dark prompt bars.</li>
-                    <li><strong>Coding Cowboy</strong> — warm wood grain, tooled leather borders, engraved text, saloon ambience.</li>
-                    <li><strong>Marble Stone</strong> — carved marble background, ionic-column borders, chiseled text.</li>
-                    <li><strong>Bubblegum Princess</strong> — pink dreamscape with rainbow borders and sparkle bursts when tests pass.</li>
-                    <li><strong>Neon City</strong> — 1980s synthwave grid, neon palm corners, magenta/cyan palette.</li>
+                    <li><strong>Normal</strong> — your chosen background and text preset, no rewriting.</li>
+                    <li><strong>JARVISmaxxing</strong> — holographic cyan-blue HUD over a real chamfered-corner SVG border with an animated dial, progress bar, plateau ridges, and a slow pulse. The ANSI rewriter recolors Claude's dark prompt bars and tool-output blocks into the HUD's blue palette.</li>
+                    <li><strong>Coding Cowboy</strong> — warm wood-grain background, tooled-leather corner art, engraved text, and an ANSI rewriter that maps the agent's color tiers onto saloon-era browns and oxidized brass.</li>
+                    <li><strong>Marble Stone</strong> — carved marble background, ionic-column corner art, chiseled text, and a marble-toned ANSI rewriter.</li>
+                    <li><strong>Bubblegum Princess</strong> — pink dreamscape with rainbow border art and sparkle bursts when test runs pass.</li>
+                    <li><strong>Neon City</strong> — 1980s synthwave grid background, neon palm corners, magenta/cyan ANSI rewriter.</li>
                 </ul>
+                <p>Each mode also adds a <em>Refresh</em> button on the identity bar — useful if the ANSI rewriter falls behind a long stretch of pre-existing scrollback.</p>
 
                 <h3>Ten border decorations</h3>
-                <p>Pair any border with any visual mode, or let Terminal Conductor auto-match. Choices: None, Rose Vines, String Lights, Coding Cowboy, Ocean Waves, Stars, Ionic Columns, Unicorn Rainbow, Neon Palms, and the JARVIS HUD (visual-mode-only).</p>
-                <p>Toggle <em>Settings → Appearance → Force mode borders</em> off to decouple mode and border.</p>
+                <p>Pair any border with any visual mode, or let Terminal Conductor auto-match. Choices: None, Rose Vines, String Lights, Coding Cowboy, Ocean Waves, Stars, Ionic Columns, Unicorn Rainbow, Neon Palms, and the JARVIS HUD (the only border tied to a specific mode).</p>
+                <p>Borders are positioned image overlays — separate corner and edge PNGs with a magenta-key transparency pipeline. The corner art clip-path notches the terminal content polygon so the corners stay protected even when you set the border edge thinner than the corner sprite.</p>
+                <p>Toggle <em>Settings → Appearance → Force mode borders</em> off to decouple mode and border. The mode's auto-paired border is then a suggestion you can override per tab.</p>
 
                 <h3>Per-tab vs group vs global</h3>
-                <p>Visual mode and border can be set per tab, per group, or globally as a default. New tabs inherit the parent's appearance if <em>Settings → Appearance → Inherit on new tab</em> is on (default).</p>
+                <p>Visual mode and border can be set per tab, per group, or globally as a default. New tabs inherit the parent's appearance if <em>Settings → Appearance → Inherit on new tab</em> is on (default). Group-level visual modes propagate to every member tab unless that tab has explicitly overridden them — so you can set "Coding Cowboy" once on a group and every shell in it adopts the look.</p>
             </section>
 
             <section id="skins">
@@ -408,9 +446,44 @@
                 <p>A skin so committed to 1992 System 7 that even the settings dialog looks like it shipped with the Macintosh LC. Charcoal window chrome, 3D bevels, pinstripe titlebars, monospace menu labels. Every component — tabs, buttons, alerts, confirms, settings — is re-rendered in period-correct style. The <code>data-retro-exempt</code> attribute is reserved for surfaces that must remain modern (rare).</p>
             </section>
 
+            <section id="languages">
+                <h2>Languages</h2>
+                <p>Terminal Conductor's interface is fully localized into seven languages. Switch in <em>Settings → Language</em>:</p>
+                <ul>
+                    <li>English</li>
+                    <li>Spanish (Spain) / Español</li>
+                    <li>French / Français</li>
+                    <li>Russian / Русский</li>
+                    <li>Arabic / العربية</li>
+                    <li>Korean / 한국어</li>
+                    <li>Chinese — Simplified (简体中文) and Traditional (繁體中文)</li>
+                </ul>
+                <p>Setting the language also exports <code>LANG</code> to the spawned shell so terminal-side tools (man pages, system messages, locale-aware utilities) match.</p>
+                <p>Arabic mode flips the entire interface to right-to-left layout — panels, dialogs, settings, the tab bar — while keeping the terminal content itself pinned LTR (because shell output is written left-to-right regardless of the surrounding UI).</p>
+            </section>
+
+            <section id="theme">
+                <h2>Light &amp; dark theme</h2>
+                <p>Terminal Conductor ships a light theme alongside the dark default. Switch in <em>Settings → Appearance → Theme</em>. The light theme:</p>
+                <ul>
+                    <li>Re-skins every panel, dialog, menu, and identity bar element to a warm, paper-like palette.</li>
+                    <li>Updates the native macOS titlebar via <code>Window.setTheme()</code> so the chrome matches.</li>
+                    <li>Keeps the terminal content area dark, because shell output, agent UIs, and TUIs are all designed against a dark canvas — flipping that breaks readability and color schemes you've already tuned.</li>
+                </ul>
+                <p>Visual modes layer on top of the theme — you can run, say, Bubblegum Princess on light theme for a brighter overall feel.</p>
+            </section>
+
+            <section id="updates">
+                <h2>Updates</h2>
+                <p>Terminal Conductor checks for new releases through Tauri's built-in updater plugin. Open <em>Settings → About → Check for Updates</em> to query the manifest manually; if a new build is available, you'll see release notes and an <em>Install &amp; Restart</em> button.</p>
+                <p>The check is opt-in: nothing is fetched in the background unless you click. The endpoint is <code>updates.terminalconductor.com</code> and the downloaded bundle is verified against an embedded minisign public key before it's applied — a tampered binary is rejected without running.</p>
+                <p>The Mac App Store edition (TC SSH) updates through the App Store, not this mechanism.</p>
+            </section>
+
             <section id="privacy">
                 <h2>Privacy &amp; local-first</h2>
-                <p>Terminal Conductor runs entirely on your Mac. Zero telemetry, zero analytics, no external servers, no login required. State lives in <code>~/Library/Application Support/TerminalConductor/</code> and browser <code>localStorage</code>. See the <a href="/privacy">Privacy Policy</a> for details, including the complete-deletion procedure.</p>
+                <p>Terminal Conductor runs entirely on your Mac. Zero telemetry, zero analytics, no login required. State lives in <code>~/Library/Application Support/TerminalConductor/</code> and browser <code>localStorage</code>. The only outbound network call the app itself makes is the explicit <em>Check for Updates</em> request to <code>updates.terminalconductor.com</code> — and that only when you click the button. The host <code>gh</code> CLI is invoked for the optional GitHub PR row in the bottom panel; whatever it reports back stays local.</p>
+                <p>See the <a href="/privacy">Privacy Policy</a> for the full breakdown, the entitlement-by-entitlement justification, and the complete-deletion procedure.</p>
             </section>
 
             <section id="shortcuts">
@@ -440,21 +513,40 @@
                 <p>Force-quit Terminal Conductor (<kbd>⌘⌥Esc</kbd>) and relaunch. The daemon preserves your PTYs, so tabs and running agents restore. If it repeats, open <em>View → Toggle Developer Tools</em> and capture the red Console entries.</p>
 
                 <h3>Agent badge stuck</h3>
-                <p>Agent detection uses a 5-minute latch to prevent flicker. If it's wrong for longer, click <em>Refresh</em> on the identity bar or switch away and back to the tab.</p>
+                <p>Agent detection uses a 5-minute latch to prevent flicker. If it's wrong for longer, click <em>Refresh</em> on the identity bar or switch away and back to the tab. For tabs opened through the managed-SSH transport, agent detection runs against the rolling output buffer instead of the process tree, so you may need a few seconds of fresh output before the badge updates.</p>
+
+                <h3>Agent not detected in an SSH tab</h3>
+                <p>Make sure the agent's banner is reaching the terminal buffer (don't pipe through <code>less</code>). The output-buffer fallback recognizes English brand names plus Chinese variants for Kimi and Qwen — if your agent prints in another language, click the identity bar's tab color dot and set the agent manually.</p>
 
                 <h3>GitHub PR row not appearing</h3>
-                <p>The row requires <code>gh auth status</code> to be green and the current branch to have an open PR. First appearance can take up to 30 seconds.</p>
+                <p>The row requires <code>gh auth status</code> to be green on the host machine and the current branch to have an open PR. First appearance can take up to 30 seconds.</p>
 
                 <h3>Test result row not appearing</h3>
                 <p>Make sure the output is reaching the terminal buffer — don't pipe test results through <code>less</code> or similar paginators. The parser looks for pytest <code>=====</code> footers, cargo <code>test result: ok/FAILED</code>, and jest/vitest <code>Tests: N failed, N passed</code>.</p>
 
                 <h3>SSH disconnect fires after a few minutes idle</h3>
-                <p>Enable <em>Settings → Terminal → SSH keepalive</em>. For really flaky networks, enable <em>Wrap tmux</em> on the identity bar so a dropped stream doesn't kill the remote session.</p>
+                <p>For OpenSSH-binary tabs, enable <em>Settings → Terminal → SSH keepalive</em>. For really flaky networks, click <em>Wrap tmux</em> on the identity bar so a dropped stream doesn't kill the remote session. Managed-SSH tabs use russh's keepalive natively and surface a one-click <em>Reconnect</em> in the disconnect banner — no tmux wrap needed.</p>
+
+                <h3>Drag-drop file upload says "not supported"</h3>
+                <p>File drag-drop only works in LOCAL tabs and managed-SSH tabs. DOCKER and OpenSSH-binary tabs can't be targeted because there's no in-band file channel for them. For a Docker tab, run <code>docker cp</code> manually; for an OpenSSH tab, use <code>scp</code> at the prompt.</p>
+
+                <h3>OSC 7 cwd not updating in remote tabs</h3>
+                <p>Your remote shell isn't emitting OSC 7. Add this to <code>~/.bashrc</code> or <code>~/.zshrc</code> on the remote host:</p>
+                <pre><code>PROMPT_COMMAND='printf "\033]7;file://%s%s\033\\" "$HOSTNAME" "$PWD"'</code></pre>
+
+                <h3>Port forward says "address already in use"</h3>
+                <p>Another process on your machine is already bound to that local port. Either pick a different local port, or quit whatever's using it. <code>lsof -iTCP:&lt;port&gt; -sTCP:LISTEN</code> finds the culprit.</p>
+
+                <h3>Saved Keychain credentials don't auto-fill</h3>
+                <p>Open <em>Keychain Access.app</em>, search for <code>com.terminalconductor.app</code>, and confirm the entry exists. If macOS has marked the entry as locked or denied, double-click it and approve access for Terminal Conductor. Re-saving from the Connect dialog also recreates the entry cleanly.</p>
+
+                <h3>"Check for Updates" reports no update available</h3>
+                <p>You're on the latest published build. The check is gated on the manifest at <code>updates.terminalconductor.com</code>; if you don't see new releases for an extended period, the App Store edition (TC SSH) may be the better fit since it auto-updates through Apple.</p>
             </section>
 
             <footer>
                 <p>Still have questions? <a href="/support">Visit support</a> or email <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>.</p>
-                <p>&copy; 2026 Mark Huthmaker. All rights reserved.</p>
+                <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
             </footer>
         </div>
     </div>

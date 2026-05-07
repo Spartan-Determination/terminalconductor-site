@@ -8,44 +8,44 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #06090f;
-            color: #c4d4de;
+            background: #fcfbf8;
+            color: #5a4e3f;
             line-height: 1.7;
         }
         .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
         h1 {
             font-size: 2em;
             font-weight: 700;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
-        .updated { font-size: 0.9em; color: #7a8994; margin-bottom: 32px; }
-        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
-        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
-        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
-        strong { color: #d3e2eb; font-weight: 600; }
-        em { color: #c4d4de; font-style: italic; }
+        .updated { font-size: 0.9em; color: #8a7f6d; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #8a6a2c; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #2a2319; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #5a4e3f; margin-bottom: 12px; }
+        strong { color: #1a1510; font-weight: 600; }
+        em { color: #5a4e3f; font-style: italic; }
         ul, ol { padding-left: 24px; margin-bottom: 12px; }
-        a { color: #6fdcff; text-decoration: none; }
+        a { color: #8a6a2c; text-decoration: none; }
         a:hover { text-decoration: underline; }
         code {
             font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.6);
-            color: #a9e4ff;
+            background: rgba(138, 106, 44, 0.08);
+            color: #8a6a2c;
             padding: 2px 6px;
             border-radius: 4px;
             font-size: 0.88em;
         }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; }
         .callout {
-            background: rgba(10, 42, 58, 0.5);
-            border-left: 3px solid #6fdcff;
+            background: rgba(138, 106, 44, 0.06);
+            border-left: 3px solid #8a6a2c;
             border-radius: 6px;
             padding: 14px 18px;
             margin: 16px 0 20px;
         }
-        .callout p { margin-bottom: 0; color: #c4dfec; }
+        .callout p { margin-bottom: 0; color: #5a4e3f; }
         .allcaps {
             text-transform: uppercase;
             letter-spacing: 0.03em;
@@ -54,18 +54,25 @@
             text-align: center;
             padding: 32px 0 8px;
             font-size: 0.85em;
-            color: #556671;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
             margin-top: 56px;
         }
+    
+        /* v2 palette overrides */
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>End User License Agreement</h1>
-        <p class="updated">Last updated: April 18, 2026</p>
+        <p class="updated">Last updated: May 7, 2026</p>
 
-        <p>This End User License Agreement ("EULA") is a legal agreement between you ("You", "Your") and Mark Huthmaker ("We", "Our", "Us", the "Developer"). It governs your use of the Terminal Conductor macOS application and any updates, upgrades, or supplements to it (the "App"). By installing, copying, or using the App, you agree to be bound by this EULA. If you do not agree, do not install or use the App.</p>
+        <p>This End User License Agreement ("EULA") is a legal agreement between you ("You", "Your") and Camis AI LLC ("We", "Our", "Us", the "Developer"). It governs your use of the Terminal Conductor macOS application and any updates, upgrades, or supplements to it (the "App"). By installing, copying, or using the App, you agree to be bound by this EULA. If you do not agree, do not install or use the App.</p>
 
         <p>If you installed Terminal Conductor from the Mac App Store, your install is additionally governed by Apple's Licensed Application End User License Agreement, available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.</p>
 
@@ -87,7 +94,7 @@
         </ul>
 
         <h2>4. AI Agents and Third-Party Tools — Read This Carefully</h2>
-        <p>Terminal Conductor is designed to host AI coding agents (including, without limitation, Anthropic Claude Code, OpenAI Codex CLI, Google Gemini CLI, and Aider) and any other command-line tools you launch inside its terminal tabs. <strong>We do not build, operate, control, review, or endorse any of those third-party tools.</strong> When you use an AI agent inside Terminal Conductor, that agent:</p>
+        <p>Terminal Conductor is designed to host AI coding agents (including, without limitation, Anthropic Claude Code, OpenAI Codex CLI, Google Gemini CLI, Aider, Moonshot Kimi Code CLI, and Alibaba Qwen Code CLI) and any other command-line tools you launch inside its terminal tabs. <strong>We do not build, operate, control, review, or endorse any of those third-party tools.</strong> When you use an AI agent inside Terminal Conductor, that agent:</p>
         <ul>
             <li>Runs as a separate process you have installed and authorized;</li>
             <li>Is governed by its own terms of service, license, and privacy policy;</li>
@@ -125,7 +132,7 @@
         <p>You agree to defend, indemnify, and hold harmless the Developer and Our affiliates, licensors, and contributors from and against any claims, damages, liabilities, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use or misuse of the App; (b) any commands executed in or through the App, whether by you, by an AI agent acting on your behalf, or by any other process; (c) your violation of this EULA; (d) your violation of any applicable law or regulation; or (e) your violation of any third party's rights, including intellectual property or privacy rights.</p>
 
         <h2>10. Updates and Availability</h2>
-        <p>We may release updates, bug fixes, patches, or new versions of the App from time to time. Updates may be delivered automatically through the Mac App Store. Any update is governed by this EULA unless accompanied by a separate license, in which case the accompanying license controls. We do not guarantee that any particular feature will be preserved across updates.</p>
+        <p>We may release updates, bug fixes, patches, or new versions of the App from time to time. Updates are delivered automatically through the Mac App Store for App Store installs, or through the in-app updater (Tauri updater plugin) for direct-download installs; in either case the user controls when an update is applied. Any update is governed by this EULA unless accompanied by a separate license, in which case the accompanying license controls. We do not guarantee that any particular feature will be preserved across updates.</p>
 
         <h2>11. Open-Source and Third-Party Components</h2>
         <p>The App incorporates open-source components, including without limitation components licensed under the MIT, Apache 2.0, BSD, and similar permissive licenses. Those components remain subject to their respective licenses, which are available on request. Nothing in this EULA restricts your rights under those third-party licenses with respect to the specific third-party components.</p>
@@ -167,7 +174,7 @@
         <p>Questions about this EULA: <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>.</p>
 
         <footer>
-            <p>&copy; 2026 Mark Huthmaker. All rights reserved.</p>
+            <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
         </footer>
     </div>
 </body>

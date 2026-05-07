@@ -8,63 +8,70 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #06090f;
-            color: #c4d4de;
+            background: #fcfbf8;
+            color: #5a4e3f;
             line-height: 1.7;
         }
         .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
         h1 {
             font-size: 2em;
             font-weight: 700;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
-        .subtitle { color: #7a8994; margin-bottom: 40px; font-size: 1em; }
+        .subtitle { color: #8a7f6d; margin-bottom: 40px; font-size: 1em; }
         h2 {
             font-size: 0.85em;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin: 36px 0 14px;
             text-transform: uppercase;
             letter-spacing: 0.18em;
             font-weight: 600;
         }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; text-decoration: none; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; text-decoration: none; }
         .back:hover { text-decoration: underline; }
         .doc-list { list-style: none; padding: 0; margin-bottom: 8px; }
         .doc-list li { margin: 0; }
         .doc-link {
             display: block;
             padding: 18px 22px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(42, 35, 25, 0.1);
             border-radius: 10px;
             margin-bottom: 10px;
             transition: border-color 0.2s, background 0.2s;
             text-decoration: none;
         }
         .doc-link:hover {
-            border-color: rgba(111, 220, 255, 0.35);
-            background: rgba(10, 42, 58, 0.3);
+            border-color: rgba(138, 106, 44, 0.4);
+            background: rgba(138, 106, 44, 0.05);
         }
         .doc-title {
             font-size: 1.05em;
-            color: #e8f3f9;
+            color: #1a1510;
             font-weight: 600;
             margin-bottom: 4px;
         }
         .doc-desc {
             font-size: 0.9em;
-            color: #8298a6;
+            color: #8a7f6d;
         }
         footer {
             text-align: center;
             padding: 32px 0 8px;
             font-size: 0.85em;
-            color: #556671;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
             margin-top: 56px;
         }
+    
+        /* v2 palette overrides */
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -102,14 +109,14 @@
 
         <h2>Contact</h2>
         <ul class="doc-list">
-            <li><a href="mailto:myspartandetermination@gmail.com" class="doc-link">
+            <li><a href="mailto:support@terminalconductor.com" class="doc-link">
                 <div class="doc-title">Email support</div>
-                <div class="doc-desc">myspartandetermination@gmail.com — typical response within one business day.</div>
+                <div class="doc-desc">support@terminalconductor.com — typical response within one business day.</div>
             </a></li>
         </ul>
 
         <footer>
-            <p>&copy; 2026 Mark Huthmaker. All rights reserved.</p>
+            <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
         </footer>
     </div>
 </body>

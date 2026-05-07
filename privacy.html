@@ -8,60 +8,67 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #06090f;
-            color: #c4d4de;
+            background: #fcfbf8;
+            color: #5a4e3f;
             line-height: 1.7;
         }
         .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
         h1 {
             font-size: 2em;
             font-weight: 700;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
-        .updated { font-size: 0.9em; color: #7a8994; margin-bottom: 32px; }
-        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
-        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
-        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
-        strong { color: #d3e2eb; font-weight: 600; }
+        .updated { font-size: 0.9em; color: #8a7f6d; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #8a6a2c; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #2a2319; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #5a4e3f; margin-bottom: 12px; }
+        strong { color: #1a1510; font-weight: 600; }
         ul, ol { padding-left: 24px; margin-bottom: 12px; }
-        a { color: #6fdcff; text-decoration: none; }
+        a { color: #8a6a2c; text-decoration: none; }
         a:hover { text-decoration: underline; }
         code {
             font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.6);
-            color: #a9e4ff;
+            background: rgba(138, 106, 44, 0.08);
+            color: #8a6a2c;
             padding: 2px 6px;
             border-radius: 4px;
             font-size: 0.88em;
         }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; }
         .callout {
-            background: rgba(10, 42, 58, 0.5);
-            border-left: 3px solid #6fdcff;
+            background: rgba(138, 106, 44, 0.06);
+            border-left: 3px solid #8a6a2c;
             border-radius: 6px;
             padding: 14px 18px;
             margin: 16px 0 20px;
         }
-        .callout p { margin-bottom: 0; color: #c4dfec; }
+        .callout p { margin-bottom: 0; color: #5a4e3f; }
         footer {
             text-align: center;
             padding: 32px 0 8px;
             font-size: 0.85em;
-            color: #556671;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
             margin-top: 56px;
         }
+    
+        /* v2 palette overrides */
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: April 18, 2026</p>
+        <p class="updated">Last updated: May 7, 2026</p>
 
         <h2>Overview</h2>
-        <p>Terminal Conductor is a macOS application developed by Mark Huthmaker (the "Developer"). This Privacy Policy describes what information Terminal Conductor handles, how it handles it, and your choices regarding that information.</p>
+        <p>Terminal Conductor is a macOS application developed by Camis AI LLC (the "Developer"). This Privacy Policy describes what information Terminal Conductor handles, how it handles it, and your choices regarding that information.</p>
 
         <div class="callout">
             <p><strong>In plain English:</strong> Terminal Conductor runs entirely on your Mac. We do not operate servers, do not collect analytics, do not track you, and do not transmit any of your data to Us or to any third party. Every piece of state you see in the app lives in files under your home directory, under your control.</p>
@@ -99,8 +106,8 @@
             <li>Feature toggles (SSH keepalive, mention picker, activity pulse, etc.).</li>
         </ul>
 
-        <h3>Optional SSH passwords</h3>
-        <p>If you enable the optional SSH auto-login feature, Terminal Conductor stores the passwords you explicitly enter in your browser's <code>localStorage</code> with light obfuscation. This is a convenience feature only, <strong>not a security boundary</strong>. We recommend using SSH keys or a dedicated password manager for real security. Passwords are never transmitted off your device and never written to macOS Keychain.</p>
+        <h3>Saved SSH credentials (platform Keychain)</h3>
+        <p>If you save a connection's password or private-key passphrase in the Connect dialog, Terminal Conductor stores that secret in the operating system's native credential store — macOS Keychain (Security framework), Windows Credential Manager, or the Linux kernel keyring — via the cross-platform <code>keyring</code> Rust crate. Each credential is filed under the service name <code>com.terminalconductor.app</code> and you can audit, revoke, or revoke-all entries directly in <em>Keychain Access.app</em>. Credentials are never transmitted off your device and never written to plaintext disk by Terminal Conductor. Earlier builds used an obfuscated <code>localStorage</code> field; that path has been retired and any legacy entries migrate automatically to the Keychain on first launch.</p>
 
         <h3>Runtime state (in-memory only)</h3>
         <p>Process-tree and auto-detection state (current agent, git branch, framework, running foreground command) is held in memory while the App runs and is not written to disk in any identifiable form.</p>
@@ -116,7 +123,7 @@
         <p>None of this data is used for advertising, analytics, profiling, or any purpose unrelated to the core functionality of the App.</p>
 
         <h2>4. Data Sharing and Third-Party Services</h2>
-        <p><strong>Terminal Conductor itself does not share any data with any third party.</strong> Terminal Conductor is a terminal wrapper, which means you may use it to run other software — AI coding agents (such as Claude Code, Codex CLI, Gemini CLI, Aider), <code>ssh</code>, <code>docker</code>, <code>git</code>, and any other command-line tool. Those tools:</p>
+        <p><strong>Terminal Conductor itself does not share any data with any third party.</strong> Terminal Conductor is a terminal wrapper, which means you may use it to run other software — AI coding agents (such as Claude Code, Codex CLI, Gemini CLI, Aider, Kimi Code CLI, Qwen Code CLI), <code>ssh</code>, <code>docker</code>, <code>git</code>, and any other command-line tool. Those tools:</p>
         <ul>
             <li>Operate independently;</li>
             <li>Have their own privacy policies;</li>
@@ -151,7 +158,7 @@
                 <br><code>~/Library/Application Support/TerminalConductor/</code></li>
             <li>Delete the preferences file:
                 <br><code>~/Library/Preferences/com.terminalconductor.app.plist</code></li>
-            <li>(Optional) If you enabled SSH auto-login, clear the <code>localStorage</code> by removing the directory in Step 3 — that covers it.</li>
+            <li>(Optional) If you saved SSH credentials, open <em>Keychain Access.app</em>, search for the service name <code>com.terminalconductor.app</code>, and delete the entries.</li>
         </ol>
         <p>Because we store no data off your device, no further action is required, and there is nothing for us to delete on our side.</p>
 
@@ -178,7 +185,7 @@
         <p>For privacy-related questions or concerns, email <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a> with the subject line "Privacy Request."</p>
 
         <footer>
-            <p>&copy; 2026 Mark Huthmaker. All rights reserved.</p>
+            <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
         </footer>
     </div>
 </body>

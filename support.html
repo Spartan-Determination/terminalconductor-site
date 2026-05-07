@@ -8,38 +8,38 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #06090f;
-            color: #c4d4de;
+            background: #fcfbf8;
+            color: #5a4e3f;
             line-height: 1.7;
         }
         .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
         h1 {
             font-size: 2em;
             font-weight: 700;
-            color: #6fdcff;
+            color: #8a6a2c;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
-        .subtitle { font-size: 1em; color: #7a8994; margin-bottom: 32px; }
-        h2 { font-size: 1.15em; color: #6fdcff; margin: 32px 0 12px; letter-spacing: -0.2px; }
-        h3 { font-size: 1em; color: #a9bcc8; margin: 20px 0 8px; font-weight: 600; }
-        p, li { font-size: 0.95em; color: #9fb0bb; margin-bottom: 12px; }
-        strong { color: #d3e2eb; font-weight: 600; }
+        .subtitle { font-size: 1em; color: #8a7f6d; margin-bottom: 32px; }
+        h2 { font-size: 1.15em; color: #8a6a2c; margin: 32px 0 12px; letter-spacing: -0.2px; }
+        h3 { font-size: 1em; color: #2a2319; margin: 20px 0 8px; font-weight: 600; }
+        p, li { font-size: 0.95em; color: #5a4e3f; margin-bottom: 12px; }
+        strong { color: #1a1510; font-weight: 600; }
         ul { padding-left: 24px; margin-bottom: 12px; }
-        a { color: #6fdcff; text-decoration: none; }
+        a { color: #8a6a2c; text-decoration: none; }
         a:hover { text-decoration: underline; }
         code {
             font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-            background: rgba(10, 42, 58, 0.6);
-            color: #a9e4ff;
+            background: rgba(138, 106, 44, 0.08);
+            color: #8a6a2c;
             padding: 2px 6px;
             border-radius: 4px;
             font-size: 0.88em;
         }
-        .back { display: inline-block; margin-bottom: 32px; color: #6fdcff; font-size: 0.9em; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; }
         .contact-box {
-            background: rgba(10, 42, 58, 0.5);
-            border: 1px solid rgba(111, 220, 255, 0.25);
+            background: rgba(138, 106, 44, 0.06);
+            border: 1px solid rgba(138, 106, 44, 0.3);
             border-radius: 10px;
             padding: 20px 24px;
             margin: 24px 0 32px;
@@ -49,12 +49,12 @@
         .contact-box a { font-weight: 600; }
         .faq-item {
             padding: 18px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(42, 35, 25, 0.06);
         }
         .faq-item:last-child { border-bottom: none; }
         .faq-item strong {
             display: block;
-            color: #d3e2eb;
+            color: #1a1510;
             margin-bottom: 6px;
             font-size: 1em;
         }
@@ -62,11 +62,18 @@
             text-align: center;
             padding: 32px 0 8px;
             font-size: 0.85em;
-            color: #556671;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
             margin-top: 56px;
         }
+    
+        /* v2 palette overrides */
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -77,7 +84,7 @@
         <div class="contact-box">
             <p>Primary contact for anything not answered below:</p>
             <p><a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a></p>
-            <p style="color: #7a8994; font-size: 0.9em;">We typically respond within one business day.</p>
+            <p style="color: #8a7f6d; font-size: 0.9em;">We typically respond within one business day.</p>
         </div>
 
         <h2>Before You Write In</h2>
@@ -140,7 +147,7 @@
 
         <div class="faq-item">
             <strong>Which AI agents does Terminal Conductor support?</strong>
-            <p>Any that run in a terminal. Auto-detection is built for Claude Code, Codex CLI, Gemini CLI, and Aider, including model-name recognition where the agent exposes it. Other CLI-based agents still work — you just won't get the badge.</p>
+            <p>Any that run in a terminal. First-class auto-detection (with a colored tab gradient and an agent badge in the identity bar) covers six: <strong>Claude Code, Codex CLI, Gemini CLI, Aider, Kimi Code CLI, and Qwen Code CLI</strong> — including model-name recognition where the agent exposes it. Kimi and Qwen also light up from Chinese-language banners (<code>通义千问</code>, <code>通義千問</code>, <code>月之暗面</code>). Other CLI-based agents still work — you just won't get the colored badge.</p>
         </div>
 
         <div class="faq-item">
@@ -150,7 +157,7 @@
 
         <div class="faq-item">
             <strong>How does <code>/fork</code> work?</strong>
-            <p>In any agent tab, type <code>/fork</code>. Terminal Conductor captures the resume command, creates a paired child tab, and enters the resume command in both — you now have two tabs resuming the same conversation, diverging from there. Works for Claude Code and Codex out of the box; for Gemini we built our own fork flow because the official CLI didn't ship one.</p>
+            <p>In any agent tab, type <code>/fork</code>. Terminal Conductor captures the resume token, creates a paired child tab, and resumes the same conversation in both — they share the same starting point and diverge from there. Claude uses a switcheroo flow; Codex, Gemini, Kimi, and Qwen use a right-side fork that renames the parent <em>Original</em> and opens a new <em>Fork N</em> tab to its right. If your tab has a friendly display name (e.g. "Dev Box"), the fork inherits it.</p>
         </div>
 
         <div class="faq-item">
@@ -183,13 +190,23 @@
         </div>
 
         <div class="faq-item">
-            <strong>Does Terminal Conductor type my SSH passwords?</strong>
-            <p>Only if you enable that feature. Turn on <em>Settings → Security → SSH auto-login</em>, enter the password once, and Terminal Conductor will auto-type it when it sees a matching password prompt. Passwords are stored with light obfuscation in <code>localStorage</code> — this is convenience, not security. Use keys for anything that matters.</p>
+            <strong>Does Terminal Conductor remember my SSH passwords?</strong>
+            <p>Only if you save them. In the Connect dialog, save a password (or the passphrase for a private key) and Terminal Conductor stores it in your platform's native credential store — macOS Keychain on Mac, Credential Manager on Windows, kernel keyring on Linux. You can audit and revoke entries any time in <em>Keychain Access.app</em> by searching for <code>com.terminalconductor.app</code>. Credentials never leave your device.</p>
         </div>
 
         <div class="faq-item">
             <strong>Can I paste images into a container or SSH session?</strong>
-            <p>Yes. Copy an image, switch to the target tab, press <kbd>⌘V</kbd>. Terminal Conductor writes it to a temp file, transfers it to the right environment (local path, <code>docker cp</code>, or <code>scp</code> for Tailscale-authenticated SSH), and pastes the path into your prompt.</p>
+            <p>Yes. Copy an image, switch to the target tab, press <kbd>⌘V</kbd>. Terminal Conductor writes it to a temp file and routes it: LOCAL tabs get the local path; DOCKER tabs get a <code>docker cp</code> into the container; managed-SSH tabs (those opened from the Connect dialog with saved credentials) stream the bytes through the russh exec channel — no scp or sftp setup needed.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>Can I drag a file from Finder into a remote tab?</strong>
+            <p>Yes — but only into managed-SSH tabs (saved Connect-dialog hosts using the russh transport) and LOCAL tabs. The file uploads to <code>/tmp/tc-files/&lt;name&gt;</code> on the remote and the path is pasted at the prompt. 100 MB cap per file. DOCKER and OpenSSH-binary tabs aren't supported drop targets.</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>How do I set up port forwarding?</strong>
+            <p>Open a managed-SSH tab, then click the Network icon in the identity bar. The Port Forwards dialog lets you add local-to-remote (<code>-L</code>) or remote-to-local (<code>-R</code>) forwards on the fly. Forwards live as long as the tab does.</p>
         </div>
 
         <h3>Visual modes and borders</h3>
@@ -225,7 +242,7 @@
         <p>Email us at <a href="mailto:support@terminalconductor.com">support@terminalconductor.com</a>. For bugs, please use the template described at the top of this page. For feature requests, a short description of the workflow you're trying to support helps us prioritize.</p>
 
         <footer>
-            <p>&copy; 2026 Mark Huthmaker. All rights reserved.</p>
+            <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
         </footer>
     </div>
 </body>
