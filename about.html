@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Developer — Terminal Conductor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #fcfbf8;
+            color: #5a4e3f;
+            line-height: 1.7;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2em;
+            font-weight: 500;
+            color: #8a6a2c;
+            margin-bottom: 36px;
+            letter-spacing: -0.01em;
+        }
+        .subtitle { color: #8a7f6d; margin-bottom: 40px; font-size: 1em; }
+        .back { display: inline-block; margin-bottom: 32px; color: #8a6a2c; font-size: 0.9em; text-decoration: none; }
+        .back:hover { text-decoration: underline; }
+
+        .bio-split {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+        .bio-text { flex: 1 1 50%; min-width: 0; }
+        .bio-text p { margin-bottom: 18px; font-size: 1em; }
+        .bio-text p:last-child { margin-bottom: 0; }
+        .bio-image {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .portrait {
+            width: auto;
+            height: auto;
+            max-width: 320px;
+            max-height: 380px;
+            border-radius: 12px;
+            box-shadow: 0 8px 28px rgba(42, 35, 25, 0.12);
+            border: 1px solid rgba(42, 35, 25, 0.08);
+        }
+
+        .bio-full p {
+            margin-bottom: 18px;
+            font-size: 1em;
+        }
+        .bio-full p:last-child { margin-bottom: 0; }
+
+        .bio a {
+            color: #8a6a2c;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(138, 106, 44, 0.3);
+            transition: border-color 0.2s;
+        }
+        .bio a:hover {
+            border-bottom-color: rgba(138, 106, 44, 0.8);
+        }
+
+        @media (max-width: 640px) {
+            .bio-split { flex-direction: column-reverse; gap: 24px; }
+            .portrait { max-width: 240px; max-height: 280px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 0 8px;
+            font-size: 0.85em;
+            color: #8a7f6d;
+            border-top: 1px solid rgba(42, 35, 25, 0.1);
+            margin-top: 56px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← Back to Terminal Conductor</a>
+        <h1>About the Developer</h1>
+
+        <div class="bio">
+            <div class="bio-split">
+                <div class="bio-text">
+                    <p>Mark Huthmaker is the founder of Camis AI LLC, a software company focused on building coding tools and rethinking legacy software for the agentic AI era.</p>
+
+                    <p>Mark was born in New York and spent most of his life in the suburbs of North Texas. He holds a Bachelor of Science in Engineering from Tulane University in New Orleans, a Master of Science in Engineering from Southern Methodist University in Dallas, and an MBA from Texas Christian University in Fort Worth. In 2008, he became one of the youngest licensed engineers in the state of Texas.</p>
+                </div>
+                <div class="bio-image">
+                    <img src="/mark_image.JPG" alt="Mark Huthmaker" class="portrait">
+                </div>
+            </div>
+
+            <div class="bio-full">
+                <p>Before founding Camis AI, Mark worked as a professional environmental engineer, where he developed applications for measuring and managing compliance with state and federal health and environmental requirements. He later transitioned into remote software development, combining his engineering background with a practical interest in automation, developer tools, and AI-assisted workflows.</p>
+
+                <p>Mark founded Camis AI LLC to showcase software designed to reduce friction for people entering technology, while also modernizing older application concepts for the new age of AI agents and intelligent workflows.</p>
+
+                <p>Mark now spends much of his time in Asia with his wife, Tiffany. Outside of software development, he takes skiing lessons and continues his ongoing attempt to build a tolerance for spicy Thai cooking.</p>
+
+                <p>Mark can be contacted at <a href="mailto:admin@camisai.com">admin@camisai.com</a> and on X/Twitter at <a href="https://x.com/SpartanDetermin" target="_blank" rel="noopener noreferrer">@SpartanDetermin</a>.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Camis AI LLC. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
